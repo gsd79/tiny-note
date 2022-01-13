@@ -26,16 +26,9 @@
   <!--<link rel="stylesheet" href="style.css" />-->
 </head>
 
-
-
-<!--Header showing title centered in flex big text -->
-<!--sidebar background boarder previous entries-->
-<!--text area Jornal entry-->
-<!--mood buttons-->
-
 <body>
+  <!--header centered-->
   <div class="flex justify-center text-4xl">
-
     <h3> Tiny Note</h3>
   </div>
   <!--side bar showing todays date and previous 3 dates, consider 6 and responsive down based on screen size-->
@@ -60,18 +53,21 @@
 
       <!-- right side -->
 
-      <div class="grid grid-row-8">
-        <div class="row-start-1">
+      <!--This is where APIs go-->
+
+      <div class="flex flex-row-wrap pt-40">
+        <div>
           <img src="assets/css/placeholder_img.png" alt="placeholder for weather app">
         </div>
-        <div class="row-start-5">
+        <div>
           <img src="assets/css/placeholder_img.png" alt="placeholder for Spotify">
         </div>
       </div>
       <!--Journal entry -->
-      <div>
-        <label for="exampleFormControlTextarea1" class="form-label inline-block mb-2">Share your thoughts</label>
-        <textarea class="
+      <div class="flex flex-row">
+        <div>
+          <label for="exampleFormControlTextarea1" class="form-label inline-block mb-2">Share your thoughts</label>
+          <textarea class="
           form-control
           block
           w-full
@@ -88,25 +84,16 @@
           m-0
           focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
         " id="exampleFormControlTextarea1" rows="3" placeholder="A penny for your thoughts"></textarea>
+        </div>
       </div>
+      <!--Emoji selection bar-->
     </div>
+  </div>
   </div>
   </div>
 </body>
 
 
-<!--Side bar elements-->
-
-
-
-
-<!--Weather and Spotify Grid-->
-
-<!--Spotify App link spotify account-->
-
-<!--text area w/editing-->
-
-<!--mood buttons w/ emojis will add emoji sticker to text entry-->
 
 
 </html>
