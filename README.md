@@ -1,1 +1,1 @@
-# bullet-journal
+# tiny-note
