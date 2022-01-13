@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            blue: {
+              DEFAULT: "A4B6B4",
+              }
+            }
+            
+          }
+        }
+      }
+  </script>
+  <!--do I have to set up in the header or can we set up a separate JS and CSS file?-->
+  <!--how can I add fonts to entire page outside of Journal text entry?-->
+
+  <title>Tiny Note</title>
+  <!--<link rel="stylesheet" href="style.css" />-->
+</head>
+
+
+
+<!--Header showing title centered in flex big text -->
+<!--sidebar background boarder previous entries-->
+<!--text area Jornal entry-->
+<!--mood buttons-->
+
+<body>
+  <div class="flex justify-center text-4xl">
+
+    <h3> Tiny Note</h3>
+  </div>
+  <!--side bar showing todays date and previous 3 dates, consider 6 and responsive down based on screen size-->
+  <div class="flex min-h-screen">
+    <div class="w-64 bg-gray-100 border-r text-right">
+
+
+      <h3 class="text-center text-lg pt-6">Today</h3>
+      <div class="grid grid-rows-1">
+        <button class="rounded-full bg-white">Today's Date</button>
+      </div>
+
+      <!--Buttons will recall from local storage to the corresponding date-->
+      <h3 class="text-center text-lg pt-6">Previous Entries</h3>
+      <div class="grid grid-rows-4 grid-flow-col gap-2">
+        <button class="rounded-full bg-white">Date 1</button>
+        <button class="rounded-full bg-white">Date 2</button>
+        <button class="rounded-full bg-white">Date 3</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- right side -->
+  <!--Journal entry -->
+  <div class="flex items-center justify-center pb-40">
+    <div class="flex ">
+      <label for="exampleFormControlTextarea1" class="form-label inline-block mb-2">Share your thoughts</label>
+      <textarea class="
+          form-control
+          block
+          w-full
+          px-3
+          py-1.5
+          text-base
+          font-normal
+          text-gray-700
+          bg-white bg-clip-padding
+          border border-solid border-gray-300
+          rounded
+          transition
+          ease-in-out
+          m-0
+          focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
+        " id="exampleFormControlTextarea1" rows="3" placeholder="A penny for your thoughts"></textarea>
+    </div>
+  </div>
+
+</body>
+
+
+<!--Side bar elements-->
+
+
+
+
+<!--Weather and Spotify Grid-->
+
+<!--Spotify App link spotify account-->
+
+<!--text area w/editing-->
+
+<!--mood buttons w/ emojis will add emoji sticker to text entry-->
+
+
+</html>
