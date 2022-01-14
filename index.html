@@ -33,7 +33,7 @@
   </div>
   <!--side bar showing todays date and previous 3 dates, consider 6 and responsive down based on screen size-->
   <div>
-    <div class="flex min-h-screen">
+    <div class="flex content-center min-h-screen">
       <div class="w-64 bg-gray-100 border-r text-right">
 
 
@@ -54,20 +54,21 @@
       <!-- right side -->
 
       <!--This is where APIs go-->
+      <div class="flex space-x-4 flex-col mt-20 content-center">
 
-      <div class="flex flex-row-wrap pt-40">
-        <div>
-          <img src="assets/css/placeholder_img.png" alt="placeholder for weather app">
+        <div class="flex space-x-12">
+          <div>
+            <img src="assets/css/placeholder_img.png" alt="placeholder for weather app">
+          </div>
+          <div class="span-2">
+            <img src="assets/css/placeholder_img.png" alt="placeholder for Spotify">
+          </div>
         </div>
+        <!--Journal entry -->
         <div>
-          <img src="assets/css/placeholder_img.png" alt="placeholder for Spotify">
-        </div>
-      </div>
-      <!--Journal entry -->
-      <div class="flex flex-row">
-        <div>
-          <label for="exampleFormControlTextarea1" class="form-label inline-block mb-2">Share your thoughts</label>
-          <textarea class="
+          <div class="flex space-y-12 justify-center">
+            <label for="exampleFormControlTextarea1" class="form-label inline-block mb-2">Share your thoughts</label>
+            <textarea class="
           form-control
           block
           w-full
@@ -84,6 +85,7 @@
           m-0
           focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
         " id="exampleFormControlTextarea1" rows="3" placeholder="A penny for your thoughts"></textarea>
+          </div>
         </div>
       </div>
       <!--Emoji selection bar-->
