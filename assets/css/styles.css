@@ -1,0 +1,34 @@
+body{
+    background: rgb(95, 175, 168)
+}
+.btn {
+    background: #97c3de;
+    background-image: -webkit-linear-gradient(top, #97c3de, #97c3de);
+    background-image: -moz-linear-gradient(top, #97c3de, #97c3de);
+    background-image: -ms-linear-gradient(top, #97c3de, #97c3de);
+    background-image: -o-linear-gradient(top, #97c3de, #97c3de);
+    background-image: linear-gradient(to bottom, #97c3de, #97c3de);
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 28px;
+    font-family: Arial;
+    color: #c48452;
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+  }
+
+  .header{font-family: "Lucida Console", Monaco, monospace;
+    font-size: 70px;
+    letter-spacing: -0.6px;
+    word-spacing: 2px;
+    color: #c48452;
+    font-weight: bold;
+    font-style: oblique;
+    font-variant: normal;
+    text-transform: none;
+    
+    ;}
+    left-sidebar{
+        background-color: #c48452;
+    }

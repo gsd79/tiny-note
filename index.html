@@ -5,20 +5,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            blue: {
-              DEFAULT: "A4B6B4",
-            }
-          }
+  <link rel="stylesheet" href="./assets/css/styles.css">
 
-        }
-      }
-    }
-  </script>
+
   <!--do I have to set up in the header or can we set up a separate JS and CSS file?-->
   <!--how can I add fonts to entire page outside of Journal text entry?-->
 
@@ -26,28 +15,29 @@
   <!--<link rel="stylesheet" href="style.css" />-->
 </head>
 
-<body>
+<body class="overflow-hidden items-center">
   <!--header centered-->
-  <div class="flex justify-center text-4xl">
-    <h3> Tiny Note</h3>
+  <div class="flex justify-center text-6xl ">
+    <h3 class=" text-blue-200 pt- m-1 is-four-fifths-widescreen header ">
+    tinyNote</h3>
   </div>
   <!--side bar showing todays date and previous 3 dates, consider 6 and responsive down based on screen size-->
-  <div>
+  <div class="left-sidebar"></div>
     <div class="flex content-center min-h-screen">
       <div class="w-64 bg-gray-100 border-r text-right">
 
 
         <h3 class="text-center text-lg pt-6">Today</h3>
         <div class="grid grid-rows-1">
-          <button class="rounded-full bg-white">Today's Date</button>
+          <button class="btn text-yellow-700 text-xl bg-blue-200 no-underline">Today's Date</button>
         </div>
 
         <!--Buttons will recall from local storage to the corresponding date-->
         <h3 class="text-center text-lg pt-6">Previous Entries</h3>
         <div class="grid grid-rows-3 gap-2">
-          <button class="rounded-full bg-white">Date 1</button>
-          <button class="rounded-full bg-white">Date 2</button>
-          <button class="rounded-full bg-white">Date 3</button>
+          <button class=" btn text-yellow-700 text-xl bg-blue-200 no-underline">Date 1</button>
+          <button class=" btn text-yellow-700 text-xl bg-blue-200 no-underline">Date 2</button>
+          <button class="btn text-yellow-700 text-xl bg-blue-200 no-underline">Date 3</button>
         </div>
       </div>
 
@@ -55,18 +45,12 @@
 
       <!--This is where APIs go-->
       <div class="flex space-x-4 flex-col mt-20 content-center">
-
-        <div class="flex space-x-12">
-          <div>
-            <img src="assets/css/placeholder_img.png" alt="placeholder for weather app">
-          </div>
-          <div class="span-2">
-            <img src="assets/css/placeholder_img.png" alt="placeholder for Spotify">
-          </div>
+        <div class="span-2">
+          <img src="assets/css/placeholder_img.png" alt="placeholder for Spotify">
         </div>
-        <!--Journal entry -->
-        <div>
-          <div class="flex space-y-12 justify-center">
+        <div class="">
+          <div overflow-hidden items-center></div>
+          <div class="text-center">
             <label for="exampleFormControlTextarea1" class="form-label inline-block mb-2">Share your thoughts</label>
             <textarea class="
           form-control
@@ -84,9 +68,15 @@
           ease-in-out
           m-0
           focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
-        " id="exampleFormControlTextarea1" rows="3" placeholder="A penny for your thoughts"></textarea>
-          </div>
+         id="exampleFormControlTextarea1" rows="3" placeholder="A penny for your thoughts"></textarea>       
+        
+            <img class= "items-right" src="assets/css/placeholder_img.png" alt="placeholder for weather app">
+          
         </div>
+        <!--Journal entry -->
+        <div class="overflow-hidden items-center">
+          
+         
       </div>
       <!--Emoji selection bar-->
     </div>
