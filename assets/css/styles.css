@@ -1,0 +1,18 @@
+.rightContainer {
+  flex: 0 0 80%
+}
+
+.imgContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.shareThought {
+  margin: 10px 20%;
+}
+
+.emoji {
+  margin: 10px 20%; 
+  display: flex;
+  justify-content: space-evenly;
+}
