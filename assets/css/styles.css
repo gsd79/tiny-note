@@ -1,12 +1,13 @@
 body{
-    background: rgb(95, 175, 168)
+    background: hsl(203, 35%, 72%)
+    
 }
 .btn {
     background: #97c3de;
     background-image: -webkit-linear-gradient(top, #97c3de, #97c3de);
     background-image: -moz-linear-gradient(top, #97c3de, #97c3de);
     background-image: -ms-linear-gradient(top, #97c3de, #97c3de);
-    background-image: -o-linear-gradient(top, #97c3de, #97c3de);
+    background-image: -o-linear-gradient(top, #97c3de, hsl(203, 35%, 72%));
     background-image: linear-gradient(to bottom, #97c3de, #97c3de);
     -webkit-border-radius: 28;
     -moz-border-radius: 28;
@@ -32,3 +33,10 @@ body{
     left-sidebar{
         background-color: #c48452;
     }
+    textarea {
+        appearance:none;
+        background:none;
+        }
+        textarea:focus {
+        outline:none;
+        }
