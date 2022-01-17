@@ -5,6 +5,7 @@
 .imgContainer {
   display: flex;
   justify-content: center;
+  
 }
 
 .shareThought {
@@ -16,3 +17,4 @@
   display: flex;
   justify-content: space-evenly;
 }
+
