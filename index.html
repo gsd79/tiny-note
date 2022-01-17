@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script src="https://cdn.tailwindcss.com"></script>
-
+  
   <script>
     tailwind.config = {
       theme: {
@@ -58,24 +58,36 @@
       <div class="flex flex-col mt-20 content-center rightContainer">
 
         <div class="imgContainer space-x-12">
-          <div class= "container-spotify">
+          <div>
             <img src="assets/css/placeholder_img.png" alt="placeholder for weather app">
           </div>
-          <div class= "container-spotify">
-            <iframe src="https://open.spotify.com/embed/album/1DFixLWuPkv3KT3TnV35m3" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+          <div class="span-2">
+            <div class="container-spotify">
+              
+              
+              <button class="btn btn-primary" id="btn-login">Login With Your Spotify Account</button>
+              <div id="result"></div>
           </div>
-          
-      
-          <script id="oauth-template" type="text/x-handlebars-template">
-            <h2>oAuth info</h2>
-            <dl class="dl-horizontal">
-              <dt>Access token</dt><dd class="text-overflow">{{access_token}}</dd>
-              <dt>Refresh token</dt><dd class="text-overflow">{{refresh_token}}</dd>
-            </dl>
+          <script id="result-template" type="text/x-handlebars-template">
+              <dl>
+                <img src="{{images.0.url}}">
+                <dt>User Name</dt>
+                <dd>{{id}}</dd>
+                <dt>Display Name</dt>
+                <dd>{{display_name}}</dd>
+                <dt>Country</dt>
+                <dd>{{country}}</dd>
+                <dt>Followers</dt>
+                <dd>{{followers.total}}</dd>
+                <dt>Profile</dt>
+                <dd><a href="{{external_urls.spotify}}" target="_blank">{{external_urls.spotify}}</a></dd>
+                <dt>Email</dt>
+                <dd>{{email}}</dd>
+                <dt>Product</dt>
+                <dd>{{product}}</dd>
+              </dl>
           </script>
-      
-          <script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.1/handlebars.min.js"></script>
-          <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+          </div>
         </div>
         <!--Journal entry -->
         <div>
@@ -113,7 +125,6 @@
   </div>
   </div>
   </div>
-  <script src = "./assets/js/spotify.js"></script>
 </body>
 
 
