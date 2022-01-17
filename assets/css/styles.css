@@ -15,7 +15,7 @@ body{
     border-radius: 28px;
     font-family: Arial;
     color: #3E99B2;
-    font-size: 25px;
+    font-size: 20px;
     padding: 10px 20px 10px 20px;
     text-decoration: none;
   }
@@ -24,15 +24,24 @@ body{
   }
 
 .header{
-  font-family: "Lucida Console", Monaco, monospace;
-    text-shadow: -1px 1px 1px 1px #b2573e;
-    font-size: 70px;
-    letter-spacing: -0.6px;
-    word-spacing: 2px;
-    color: #b2573e;
-    font-weight: bold;
-    font-style: oblique;
-    font-variant: normal;
+  font-size: 69px;
+  color: #b2573e;
+  font-family: "Arial Black", Gadget, sans-serif;
+  text-shadow: 0px 0px 0 rgb(160,69,44),
+               1px -1px 0 rgb(143,52,27),
+               2px -2px 0 rgb(125,34,9),
+               3px -3px 0 rgb(107,16,0),
+               4px -4px 0 rgb(90,-1,0),
+               5px -5px 0 rgb(72,-19,0),
+               6px -6px 0 rgb(54,-37,0),
+               7px -7px 0 rgb(36,-55,0),
+               8px -8px 0 rgb(19,-72,0),
+               9px -9px 0 rgb(1,-90,0),
+               10px -10px  0 rgb(-17,-108,0),
+               11px -11px 10px rgba(255,255,255,0),
+               11px -11px 1px rgba(255,255,255,0.5),
+               0px 0px 10px rgba(255,255,255,.2);
+
    background-color:#3E99B2;
   }
     
@@ -134,7 +143,7 @@ text-shadow: .1px .1px 0px #b2573e;}
 	font-weight:bold;
 	padding:6px 24px;
 	text-decoration:none;
-
+	text-shadow:0px 1px 0px #ced9bf;
 }
 
 
