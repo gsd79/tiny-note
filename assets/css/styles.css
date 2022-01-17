@@ -1,6 +1,6 @@
 body{
    border: 20px solid #b2573e;
-    border-radius: 0px;}
+    border-radius: 5px;}
 
 
 .btn {
@@ -48,6 +48,8 @@ body{
 textarea {
     appearance:none;
     background:none;
+    -webkit-box-shadow: 5px 5px 15px 5px #000000; 
+box-shadow: 5px 5px 15px 5px #000000;
     }
 textarea:focus {
     outline:none;
@@ -80,6 +82,7 @@ textarea:focus {
         font-style: oblique;
         font-variant: normal;
         
+        
       }
     
 .emoji p{
@@ -94,7 +97,10 @@ font-style: oblique;
 font-variant: normal;
 text-shadow: .1px .1px 0px #b2573e;}
 
-.shareThought{text-shadow: 1px 1px 1px 1px #b2573e;}
+.shareThoughts{
+  text-shadow: 1px 1px 1px 1px #b2573e;
+  -webkit-box-shadow: 5px 5px 15px 5px #000000; 
+  box-shadow: 5px 5px 15px 5px #000000;}
       
 .emoji {
         
