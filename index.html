@@ -14,16 +14,16 @@
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 
-<body>
+<body class="bg-gray-100">
   <!--header centered-->
-  <div class=" header flex justify-center text-4xl">
-    <h3 class="header m-1 is-four-fifths-widescreen mt-8">tinyNote</h3>
+  <div class=" header flex justify-center bg-gray-100 text-4xl">
+    <h3 class="header is-four-fifths-widescreen my-10 .text-shadow-lg">tinyNote</h3>
     
   </div>
   <!--side bar showing todays date and previous 3 dates, consider 6 and responsive down based on screen size-->
 
     <div class="flex content-center min-h-screen">
-      <div class="contrainer-left w-64 bg-gray-100 border-r text-right">
+      <div class="container-left w-64 bg-gray-100 text-right">
 
 
         <h3 class="text-center text-lg pt-6">Today</h3>
@@ -43,7 +43,7 @@
       <!-- right side -->
 
       <!--This is where APIs go-->
-      <div class="flex flex-col mt-20 content-center rightContainer">
+      <div class="flex flex-col content-center rightContainer">
 
         <div class="imgContainer space-x-12">
           <div>
@@ -78,10 +78,14 @@
         </div>
         <div class="emoji">
           <p>MOOD:</p>
-          <button class="button-happy">Happy 😊</button>
-          <button class="button-sad">Sad 😢</button>
-          <button class="button-angry">Angry 😡</button>
-          <button class="button-content">Content 😌</button>
+          <button class="button-happy">Happy <br>
+            😊</button>
+          <button class="button-sad">Sad <br> 
+            😢</button>
+          <button class="button-angry">Angry <br>
+            😡</button>
+          <button class="button-content">Content <br>
+            😌</button>
       </div>
     
     

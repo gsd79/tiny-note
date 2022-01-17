@@ -1,5 +1,6 @@
-body{
-    background: hsl(203, 35%, 72%);}
+body {
+  background: none;
+}
 .btn {
     background: hsl(203, 35%, 72%);
     background-image: -webkit-linear-gradient(top, hsl(203, 35%, 72%), hsl(203, 35%, 72%));
@@ -26,12 +27,8 @@ body{
     font-weight: bold;
     font-style: oblique;
     font-variant: normal;
-    text-transform: none;
+    text-shadow: 1px 1px 2px rgba(216, 217, 218, .8);}
     
-    ;}
-    container-left {
-        background: #c48452;
-    }
     textarea {
         appearance:none;
         background:none;
@@ -40,7 +37,9 @@ body{
         outline:none;
         }
     .rightContainer {
-            flex: 0 0 80%
+            flex: 0 0 80%;
+            border-radius: 60px;
+            background-color:hsl(203, 35%, 72%);
           }
           
     .imgContainer {
@@ -59,18 +58,32 @@ body{
             display: flex;
             justify-content: space-evenly;
           }
-    
+        
           .button-happy {
             -webkit-border-radius: 60;
             -moz-border-radius: 60;
             border-radius: 60px;
             font-family: Arial;
-            color: silver;
+            color:hsl(203, 35%, 72%);
             font-size: 23px;
-            background: #00ff33;
             padding: 10px 20px 10px 20px;
-            border: solid #c48452 2px;
+            border: solid hsl(203, 35)2px;
             text-decoration: none;
+            background-color: #c48452;
+          }
+
+          .button-happy:hover{
+            background: rgba(0, 255, 51, .6);
+          }
+
+          .button-sad:hover{
+            background: rgba(119,55,124);
+          }
+          .button-angry:hover{
+            background: rgba(194,39,39);
+          }
+          .button-content:hover{
+            background: rgba(58,105,202);
           }
 
           .button-sad {
@@ -78,12 +91,12 @@ body{
             -moz-border-radius: 60;
             border-radius: 60px;
             font-family: Arial;
-            color: silver;
+            color:hsl(203, 35%, 72%);
             font-size: 23px;
-            background: purple ;
             padding: 10px 20px 10px 20px;
-            border: solid #c48452 2px;
+            border: solid hsl(203, 35)2px;
             text-decoration: none;
+            background-color: #c48452;
           }
 
           .button-angry {
@@ -91,12 +104,12 @@ body{
             -moz-border-radius: 60;
             border-radius: 60px;
             font-family: Arial;
-            color: silver;
+            color:hsl(203, 35%, 72%);
             font-size: 23px;
-            background: red;
             padding: 10px 20px 10px 20px;
-            border: solid #c48452 2px;
+            border: solid hsl(203, 35)2px;
             text-decoration: none;
+            background-color: #c48452;
           }
 
           .button-content {
@@ -104,12 +117,11 @@ body{
             -moz-border-radius: 60;
             border-radius: 60px;
             font-family: Arial;
-            color: silver;
+            color:hsl(203, 35%, 72%);
             font-size: 23px;
-            background: blue;
             padding: 10px 20px 10px 20px;
-            border: solid #c48452 2px;
+            border: solid hsl(203, 35)2px;
             text-decoration: none;
+            background-color: #c48452;
           }
           
-        
