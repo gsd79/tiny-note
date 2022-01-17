@@ -3,7 +3,7 @@ body{
    border: 20px solid #b2573e;
     border-radius: 5px;}
 
-
+    /*buttons for left-side bar*/
 .btn {
     background: #3E99B2;
     background-image: -webkit-linear-gradient(top, #b2573e, #b2573e);
@@ -20,10 +20,12 @@ body{
     padding: 10px 20px 10px 20px;
     text-decoration: none;
   }
+
+  /*left container background only*/
   .container-left {
     background-color:#3E99B2;
   }
-
+/*header text styling and background color*/
 .header{
   font-size: 69px;
   color: #b2573e;
@@ -45,12 +47,12 @@ body{
 
    background-color:#3E99B2;
   }
-    
+/*textarea shadowing box*/    
 textarea {
     appearance:none;
     background:none;
     -webkit-box-shadow: 5px 5px 15px 5px #000000; 
-box-shadow: 5px 5px 15px 5px #000000;
+    box-shadow: 5px 5px 15px 5px #000000;
     }
 textarea:focus {
     outline:none;
@@ -59,18 +61,21 @@ textarea:focus {
         flex: 0 0 70%;
         border-radius:70 70px 0 0;
         overflow: hidden;
-        border: 5px solid #b2573e;}
+        border: 5px solid #b2573e;    
+        border-radius: 5px 5px 5px 5px;
+      }
         
-        
+/*right-side bar*/      
 .right-side{
   background-color:#3E99B2;
 }
+/*end right-side bar*/
       
 .imgContainer {
         display: flex;
         justify-content: center;
       }
-      
+/*left side bar buttons and main content container text*/  
 .shareThought, .mood, .previous, .today {
         margin: 50px;;
         font-family: "Lucida Console", Monaco, monospace;
@@ -85,7 +90,9 @@ textarea:focus {
         
         
       }
-    
+    /*end of left-side bar buttons and main content container text*/
+
+
 .emoji p{
 font-family: "Lucida Console", Monaco, monospace;
 text-shadow: -1px 1px 1px 1px #b2573e;
