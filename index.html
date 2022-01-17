@@ -15,25 +15,26 @@
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 
-<body class="bg-gray-100">
+<body>
   <!--header centered-->
-  <div class=" header flex justify-center bg-gray-100 text-4xl">
+  <div class=" header flex justify-center text-4xl">
     <h3 class="header is-four-fifths-widescreen my-10 .text-shadow-lg">tinyNote</h3>
     
   </div>
   <!--side bar showing todays date and previous 3 dates, consider 6 and responsive down based on screen size-->
 
-    <div class="flex content-center min-h-screen">
-      <div class="container-left w-64 bg-gray-100 text-right">
+    <div class="right-side flex content-center min-h-screen">
+      
+      <div class="container-left w-64 text-right">
 
 
-        <h3 class="text-center text-lg pt-6">Today</h3>
+        <h3 class="today text-center underline text-lg pt-6">Today</h3>
         <div class="grid grid-rows-1">
           <button class="btn">Today's Date</button>
         </div>
 
         <!--Buttons will recall from local storage to the corresponding date-->
-        <h3 class="text-center text-lg pt-6">Previous Entries</h3>
+        <h3 class="previous text-center underline text-lg pt-6">Previous Entries</h3>
         <div class="grid grid-rows-3 gap-2">
           <button class="btn">Date 1</button>
           <button class="btn">Date 2</button>
@@ -57,7 +58,7 @@
         <!--Journal entry -->
         <div>
           <div class="space-y-12 justify-center shareThought">
-            <label for="exampleFormControlTextarea1" class="form-label inline-block mb-2">Share your thoughts</label>
+            <label for="exampleFormControlTextarea1" class="shareThought form-label inline-block mb-2">Share your thoughts</label>
             <textarea class="
           form-control
           block
@@ -73,8 +74,7 @@
           transition
           ease-in-out
           m-0
-          focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
-        " id="exampleFormControlTextarea1" rows="3" placeholder="A penny for your thoughts"></textarea>
+          focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleFormControlTextarea1" rows="3" placeholder="A penny for your thoughts"></textarea>
           </div>
         </div>
         <div class="emoji">
