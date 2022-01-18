@@ -5,6 +5,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script src="https://cdn.tailwindcss.com"></script>
+
+  <script src="https://sdk.scdn.co/spotify-player.js"></script>
   
   <script>
     tailwind.config = {
@@ -62,31 +64,12 @@
             <img src="assets/css/placeholder_img.png" alt="placeholder for weather app">
           </div>
           <div class="span-2">
-            <div class="container-spotify">
-              
-              
-              <button class="btn btn-primary" id="btn-login">Login With Your Spotify Account</button>
-              <div id="result"></div>
-          </div>
-          <script id="result-template" type="text/x-handlebars-template">
-              <dl>
-                <img src="{{images.0.url}}">
-                <dt>User Name</dt>
-                <dd>{{id}}</dd>
-                <dt>Display Name</dt>
-                <dd>{{display_name}}</dd>
-                <dt>Country</dt>
-                <dd>{{country}}</dd>
-                <dt>Followers</dt>
-                <dd>{{followers.total}}</dd>
-                <dt>Profile</dt>
-                <dd><a href="{{external_urls.spotify}}" target="_blank">{{external_urls.spotify}}</a></dd>
-                <dt>Email</dt>
-                <dd>{{email}}</dd>
-                <dt>Product</dt>
-                <dd>{{product}}</dd>
-              </dl>
-          </script>
+            <div class="spotify-contain mt-3">
+             <button class ="rounded-full p-5">Log In To Your Spotify Account</button>
+            </div>
+          
+
+           
           </div>
         </div>
         <!--Journal entry -->
@@ -125,6 +108,7 @@
   </div>
   </div>
   </div>
+  
 </body>
 
 
