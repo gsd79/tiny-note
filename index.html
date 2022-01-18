@@ -5,59 +5,50 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="./assets/css/styles.css">
 
-  <script src="https://sdk.scdn.co/spotify-player.js"></script>
-  
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            blue: {
-              DEFAULT: "A4B6B4",
-            }
-          }
 
-        }
-      }
-    }
-  </script>
   <!--do I have to set up in the header or can we set up a separate JS and CSS file?-->
   <!--how can I add fonts to entire page outside of Journal text entry?-->
 
-  <title>Tiny Note</title>
+  <title>tinyNote</title>
+
   <link rel="stylesheet" href="assets/css/styles.css" />
 </head>
 
 <body>
   <!--header centered-->
-  <div class="flex justify-center text-4xl">
-    <h3> Tiny Note</h3>
+  <div class=" header flex justify-center text-4xl">
+    <h3 class="header is-four-fifths-widescreen my-10 .text-shadow-lg">tinyNote</h3>
+    
   </div>
   <!--side bar showing todays date and previous 3 dates, consider 6 and responsive down based on screen size-->
-  <div>
-    <div class="flex content-center min-h-screen">
-      <div class="w-64 bg-gray-100 border-r text-right">
+
+    <div class="right-side flex content-center min-h-screen">
+      
+      <div class="container-left w-64 text-right">
 
 
-        <h3 class="text-center text-lg pt-6">Today</h3>
+        <h3 class="today text-center text-lg pt-6">Today</h3>
         <div class="grid grid-rows-1">
-          <button class="rounded-full bg-white">Today's Date</button>
+          <button class="btn">Today's Date</button>
         </div>
 
         <!--Buttons will recall from local storage to the corresponding date-->
-        <h3 class="text-center text-lg pt-6">Previous Entries</h3>
+        <h3 class="previous text-center text-lg pt-9">Previous<br>Entries</h3>
         <div class="grid grid-rows-3 gap-2">
-          <button class="rounded-full bg-white">Date 1</button>
-          <button class="rounded-full bg-white">Date 2</button>
-          <button class="rounded-full bg-white">Date 3</button>
+          <button class="btn">Date 1</button>
+          <button class="btn">Date 2</button>
+          <button class="btn">Date 3</button>
         </div>
       </div>
 
       <!-- right side -->
 
       <!--This is where APIs go-->
-      <div class="flex flex-col mt-20 content-center rightContainer">
+
+      <div class="flex flex-col content-center rightContainer">
+
 
         <div class="imgContainer space-x-12">
           <div>
@@ -65,17 +56,135 @@
           </div>
           <div class="span-2">
             <div class="spotify-contain mt-3">
-             <button class ="rounded-full p-5">Log In To Your Spotify Account</button>
+              <div id="login">
+                <h1>This is an example of the Authorization Code flow</h1>
+                <a href="/login" class="btn btn-primary">Log in with Spotify</a>
+              </div>
+              <div id="loggedin">
+                <div id="user-profile">
+                </div>
+                <div id="oauth">
+                </div>
+                <button class="btn btn-default" id="obtain-new-token">Obtain new token using the refresh token</button>
+              </div>
             </div>
-          
-
-           
+        
+            <script id="user-profile-template" type="text/x-handlebars-template">
+              <h1>Logged in as {{display_name}}</h1>
+              <div class="media">
+                <div class="pull-left">
+                  <img class="media-object" width="150" src="{{images.0.url}}" />
+                </div>
+                <div class="media-body">
+                  <dl class="dl-horizontal">
+                    <dt>Display name</dt><dd class="clearfix">{{display_name}}</dd>
+                    <dt>Id</dt><dd>{{id}}</dd>
+                    <dt>Email</dt><dd>{{email}}</dd>
+                    <dt>Spotify URI</dt><dd><a href="{{external_urls.spotify}}">{{external_urls.spotify}}</a></dd>
+                    <dt>Link</dt><dd><a href="{{href}}">{{href}}</a></dd>
+                    <dt>Profile Image</dt><dd class="clearfix"><a href="{{images.0.url}}">{{images.0.url}}</a></dd>
+                    <dt>Country</dt><dd>{{country}}</dd>
+                  </dl>
+                </div>
+              </div>
+            </script>
+        
+            <script id="oauth-template" type="text/x-handlebars-template">
+              <h2>oAuth info</h2>
+              <dl class="dl-horizontal">
+                <dt>Access token</dt><dd class="text-overflow">{{access_token}}</dd>
+                <dt>Refresh token</dt><dd class="text-overflow">{{refresh_token}}</dd>
+              </dl>
+            </script>
+        
+            <script src="//cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.1/handlebars.min.js"></script>
+            <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+            <script>
+              (function() {
+        
+                /**
+                 * Obtains parameters from the hash of the URL
+                 * @return Object
+                 */
+                function getHashParams() {
+                  var hashParams = {};
+                  var e, r = /([^&;=]+)=?([^&;]*)/g,
+                      q = window.location.hash.substring(1);
+                  while ( e = r.exec(q)) {
+                     hashParams[e[1]] = decodeURIComponent(e[2]);
+                  }
+                  return hashParams;
+                }
+        
+                var userProfileSource = document.getElementById('user-profile-template').innerHTML,
+                    userProfileTemplate = Handlebars.compile(userProfileSource),
+                    userProfilePlaceholder = document.getElementById('user-profile');
+        
+                var oauthSource = document.getElementById('oauth-template').innerHTML,
+                    oauthTemplate = Handlebars.compile(oauthSource),
+                    oauthPlaceholder = document.getElementById('oauth');
+        
+                var params = getHashParams();
+        
+                var access_token = params.access_token,
+                    refresh_token = params.refresh_token,
+                    error = params.error;
+        
+                if (error) {
+                  alert('There was an error during the authentication');
+                } else {
+                  if (access_token) {
+                    // render oauth info
+                    oauthPlaceholder.innerHTML = oauthTemplate({
+                      access_token: access_token,
+                      refresh_token: refresh_token
+                    });
+        
+                    $.ajax({
+                        url: 'https://api.spotify.com/v1/me',
+                        headers: {
+                          'Authorization': 'Bearer ' + access_token
+                        },
+                        success: function(response) {
+                          userProfilePlaceholder.innerHTML = userProfileTemplate(response);
+        
+                          $('#login').hide();
+                          $('#loggedin').show();
+                        }
+                    });
+                  } else {
+                      // render initial screen
+                      $('#login').show();
+                      $('#loggedin').hide();
+                  }
+        
+                  document.getElementById('obtain-new-token').addEventListener('click', function() {
+                    $.ajax({
+                      url: '/refresh_token',
+                      data: {
+                        'refresh_token': refresh_token
+                      }
+                    }).done(function(data) {
+                      access_token = data.access_token;
+                      oauthPlaceholder.innerHTML = oauthTemplate({
+                        access_token: access_token,
+                        refresh_token: refresh_token
+                      });
+                    });
+                  }, false);
+                }
+              })();
+            </script>
+    
           </div>
+        </div>
         </div>
         <!--Journal entry -->
         <div>
           <div class="space-y-12 justify-center shareThought">
-            <label for="exampleFormControlTextarea1" class="form-label inline-block mb-2">Share your thoughts</label>
+
+            <label for="exampleFormControlTextarea1" class="shareThought form-label inline-block mb-2">Share your thoughts</label>
+
             <textarea class="
           form-control
           block
@@ -91,24 +200,31 @@
           transition
           ease-in-out
           m-0
-          focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
-        " id="exampleFormControlTextarea1" rows="3" placeholder="A penny for your thoughts"></textarea>
+          focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" id="exampleFormControlTextarea1" rows="3" placeholder="A penny for your thoughts"></textarea>
           </div>
         </div>
         <div class="emoji">
           <p>MOOD:</p>
-          <button>Happy</button>
-          <button>Sad</button>
-          <button>Angry</button>
-          <button>Content</button>
+
+          <button class="button-happy">Happy <br>
+            😊</button>
+          <button class="button-sad">Sad <br> 
+            😢</button>
+          <button class="button-angry">Angry <br>
+            😡</button>
+          <button class="button-content">Content <br>
+            😌</button>
       </div>
     
+
+    
       <!--Emoji selection bar-->
+
     </div>
   </div>
   </div>
   </div>
-  
+  <script src="assets/js/spotify.js"></script>
 </body>
 
 
