@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quill Test</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+  <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="/assets/css/secondary_styles.css" />
+</head>
+<body>
+  <header class="header text-center">
+    <h3 class="font-weight-bold">
+      Quill Test
+    </h3>
+  </header>
+  <main class="d-flex flex-column p-2 align-items-center">
+    <section id="interactive-area" class="top-section border-bottom">
+
+      <form>
+        <div id="editor" class="form-group p-1s entry-text">
+          
+        </div>
+
+        <div id="mood-selector" class="form-group mt-4 d-flex align-items-center">
+          <h2 class="mood-header d-inline mr-5">Mood: </h2>
+          <span class="button-wrapper inline">
+            <button id="happy-button" class="happy mood-button mr-3 btn btn-light border" type="button">Happy 😁</button>
+            <button id="sad-button" class="sad mood-button mr-3 btn btn-light border" type="button">Sad 😞</button>
+            <button id="angry-button" class="angry mood-button mr-3 btn btn-light border" type="button">Angry 😡</button>
+            <button id="content-button" class="content mood-button mr-3 btn btn-light border" type="button">Content 🙂</button>
+          </span>
+        </div>
+
+        <div id="submission" class="form-group align-items-center">
+          <button id="submit-button" class="btn btn-primary submit-btn w-100" type="submit">Submit</button>
+        </div>
+
+
+      </form>
+    </section>
+
+    <section id="load-area" class="bottom d-flex flex-column mt-3 justify-content-between w-100">
+
+    </section>
+    
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+
+    <script src="/assets/js/main.js"></script>
+    <script src="/assets/js/quill_script.js"></script>
+  </main>
+  
+</body>
+</html>
