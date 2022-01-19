@@ -12,7 +12,7 @@ var displayDate = function() {
   $(".header").append(dateEl)
 };
 
-// add class that indicates which button has been selected
+// add class that indicates which mood button has been selected
 $("form").on("click", ".mood-button", function() {
 
   if ($(this).siblings("selected")) {
@@ -23,6 +23,7 @@ $("form").on("click", ".mood-button", function() {
 
 
 // event handler that submits the form and saves to local storage
+// TODO: capture weather information and inspirational quote as well
 $("form").on("submit", function(event) {
   event.preventDefault();
 
@@ -39,7 +40,7 @@ $("form").on("submit", function(event) {
   createEntry(date,text,mood);
 })
 
-// TODO: function that creates a record for that day's entry
+//  function that creates a record for that day's entry
 var createEntry = function(date, text, mood) {
   var cardEl = $("<div>")
   .addClass("card mr-2 mb-2 w-50")
@@ -71,7 +72,7 @@ var createEntry = function(date, text, mood) {
 
 // TODO: function that loads the information from local storage and displays it on the page.
 
-//TODO: concept: load information from local storage. display the date propeerty as a clickable link in sidebar. on click, display a modal that shows the record of the previous entry
+//TODO: concept: load information from local storage. display the date property as a clickable link in sidebar. on click, display a modal that shows the record of the previous entry
 
 
 // call function on page load
