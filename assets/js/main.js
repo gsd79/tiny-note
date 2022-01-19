@@ -12,7 +12,7 @@ var displayDate = function() {
   $(".header").append(dateEl)
 };
 
-// add class that indicates which mood button has been selected
+// add class that indicates which button has been selected
 $("form").on("click", ".mood-button", function() {
 
   if ($(this).siblings("selected")) {
@@ -23,7 +23,6 @@ $("form").on("click", ".mood-button", function() {
 
 
 // event handler that submits the form and saves to local storage
-// TODO: capture weather information and inspirational quote as well
 $("form").on("submit", function(event) {
   event.preventDefault();
 
