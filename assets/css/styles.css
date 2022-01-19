@@ -25,7 +25,7 @@
    }
  
  /*header text styling and background color*/
- .header{  font-size: 87px;
+ .app-name{  font-size: 87px;
     color: #8a3080;
     font-family: Arial;
     text-shadow: 0px 0px 0 rgb(134,44,124),
