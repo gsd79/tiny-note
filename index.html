@@ -55,10 +55,33 @@
       <div class="flex flex-col content-center right-container">
 
 
-        <div class="space-x-12 img-container">
-          <div>
-            <img src="assets/css/placeholder_img.png" alt="placeholder for weather app">
-          </div>
+        <div class="space-x-20 img-container">
+          <div class="search-wrapper border-bottom">
+            <h2>Search for a City:</h2>
+          <!--search entry-->
+            <form id="search-form" class="d-flex flex-column form-group">
+              <input name="searchterm" id="searchterm" type="text" autofocus="true" placeholder="San Diego" class="mb-3 search-keyword" />
+              <button id ="submit-btn" type="submit" class="btn btn-primary gradient nice-border">Search</button>
+            </form>
+          
+  
+          <!-- search history-->
+          
+        
+          
+          
+       
+      </div>
+      <!-- generated area-->
+  
+      <div id="right" class="col-9 content-wrapper align-items-start">
+        <section id="forecasts" class="forecast-wrapper flex flex-col mx-auto">
+          <!-- dynamically created information for today's forecast will appear here-->
+  
+          <!-- dynamically created information for the 5-day forecast will appear here-->
+  
+        </section>
+      </div>
           
         </div>
         <!--Journal entry -->
@@ -106,6 +129,11 @@
   </div>
   </div>
   </div>
+  <!--jquery cdn-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- moment.js cdn-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
 
 </html>

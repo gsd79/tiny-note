@@ -108,7 +108,7 @@ textarea:focus {
   
 }
 
-.button-happy, .button-sad, .button-angry {
+.button-happy, .button-sad, .button-angry, .button-content {
   background-color: #8a307f;
   border-radius: 6px;
   border: 1px solid #b2b8ad;
@@ -123,20 +123,6 @@ textarea:focus {
   margin-right: 40px;
 }
 
-.button-content {
-background-color: #8a307f;
-border-radius: 6px;
-border: 1px solid #b2b8ad;
-display: inline-block;
-cursor: pointer;
-color: #79a7d3;
-font-size: 25px;
-width: 120px;
-height: 120px;
-padding: 20px;
-text-align:center;
-margin-right: 0px;
-}
 
 .button-happy:hover {
   background: rgba(0, 255, 51, 0.6);
