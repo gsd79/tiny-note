@@ -1,6 +1,7 @@
 body {
   border: 20px double #79a7d3;
   border-radius: 5px;
+  font-family: 'Righteous', cursive;
 }
 
 /*buttons for left-side bar*/
@@ -13,34 +14,22 @@ body {
   background-image: linear-gradient(bottom, #79a7d3, #79a7d3);
   -webkit-border-radius: 28;
   -moz-border-radius: 28;
-  border-radius: 28px;
+  border-radius: 28px 0px 0px 28px;
   font-family: Arial;
   color: #8a3080;
   font-size: 20px;
-  /*padding: 10px 20px 10px 20px;*/
+  padding: 10px 20px 10px 20px;
   text-decoration: none;
+  margin-left: 10px;
 }
 
 /*header text styling and background color*/
 .app-name {
   font-size: 87px;
   color: #8a3080;
-  font-family: Arial;
+  font-family: 'Righteous', cursive;
   text-shadow: 0px 0px 0 rgb(134, 44, 124), -1px 1px 0 rgb(130, 40, 120),
-    -2px 2px 0 rgb(126, 36, 116), -3px 3px 0 rgb(122, 32, 112),
-    -4px 4px 0 rgb(119, 29, 109), -5px 5px 0 rgb(115, 25, 105),
-    -6px 6px 0 rgb(111, 21, 101), -7px 7px 0 rgb(107, 17, 97),
-    -8px 8px 0 rgb(103, 13, 93), -9px 9px 0 rgb(99, 9, 89),
-    -10px 10px 9px rgba(121, 167, 211, 0.17),
-    -10px 10px 1px rgba(121, 167, 211, 0.5),
-    0px 0px 9px rgba(121, 167, 211, 0.2),
-  4px 3px 1px #7A2048,
-  3px 4px 1px #EEEEEE,
-  5px 4px 1px #7A2048,
-  4px 5px 1px #EEEEEE,
-  6px 5px 1px #7A2048,
-  5px 6px 1px #EEEEEE,
-  7px 6px 1px #7A2048,
+
   -33px -18px 0px rgba(64,95,207,0);
 }
 
@@ -54,7 +43,7 @@ textarea {
 textarea:focus {
   outline: none;
 }
-.rightContainer {
+.right-container {
   flex: 0 0 70%;
   border-radius: 70 70px 0 0;
   overflow: hidden;
@@ -66,30 +55,34 @@ textarea:focus {
 
 /*end right-side bar*/
 
-.imgContainer {
+.img-container {
   display: flex;
   justify-content: center;
 }
 /*left side bar buttons and main content container text*/
-.shareThought,
-.mood,
-.previous,
-.today {
-  margin: 50px;
-  font-family: "Lucida Console", Monaco, monospace;
+.share-thought, .mood-title {
+  margin: 30px;  
   text-shadow: -1px 1px 1px 1px #8a307f;
   font-size: 30px;
   letter-spacing: -0.6px;
   word-spacing: 2px;
   color: #8a307f;
   font-weight: bold;
-  font-style: oblique;
-  font-variant: normal;
+}
+.previous-title, .today-title {
+  margin-bottom: 30px;  
+  text-shadow: -1px 1px 1px 1px #8a307f;
+  font-size: 20px;
+  letter-spacing: -0.6px;
+  word-spacing: 2px;
+  color: #8a307f;
+  font-weight: bold;
+ 
 }
 /*end of left-side bar buttons and main content container text*/
 
 .emoji p {
-  font-family: "Lucida Console", Monaco, monospace;
+  
   text-shadow: -1px 1px 1px 1px #8a307f;
   font-size: 50px;
   letter-spacing: -0.6px;
@@ -109,20 +102,40 @@ textarea:focus {
 
 .emoji {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  
 }
 
-.button-happy {
+.button-happy, .button-sad, .button-angry {
   background-color: #8a307f;
   border-radius: 6px;
   border: 1px solid #b2b8ad;
   display: inline-block;
   cursor: pointer;
   color: #79a7d3;
-  font-family: Arial;
   font-size: 25px;
-  font-weight: bold;
-  padding: 6px 24px;
+  width: 120px;
+  height: 120px;
+  padding: 20px;
+  text-align:center;
+  margin-right: 40px;
+}
+
+.button-content {
+background-color: #8a307f;
+border-radius: 6px;
+border: 1px solid #b2b8ad;
+display: inline-block;
+cursor: pointer;
+color: #79a7d3;
+font-size: 25px;
+width: 120px;
+height: 120px;
+padding: 20px;
+text-align:center;
+margin-right: 0px;
 }
 
 .button-happy:hover {
@@ -139,44 +152,4 @@ textarea:focus {
   background: rgba(58, 105, 202);
 }
 
-.button-sad {
-  background-color: #8a307f;
-  border-radius: 6px;
-  border: 1px solid #b2b8ad;
-  display: inline-block;
-  cursor: pointer;
-  color: #79a7d3;
-  font-family: Arial;
-  font: size 20px;
-  font-weight: bold;
-  padding: 6px 24px;
-  text-decoration: none;
-}
 
-.button-angry {
-  background-color: #8a307f;
-  border-radius: 6px;
-  border: 1px solid #b2b8ad;
-  display: inline-block;
-  cursor: pointer;
-  color: #79a7d3;
-  font-family: Arial;
-  font-size: 20px;
-  font-weight: bold;
-  padding: 6px 24px;
-  text-decoration: none;
-}
-
-.button-content {
-  background-color: #8a307f;
-  border-radius: 6px;
-  border: 1px solid #b2b8ad;
-  display: inline-block;
-  cursor: pointer;
-  color: #79a7d3;
-  font-family: Arial;
-  font-size: 20px;
-  font-weight: bold;
-  padding: 6px 24px;
-  text-decoration: none;
-}
