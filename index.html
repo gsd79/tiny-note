@@ -18,10 +18,10 @@
 
 <body>
   <!--header centered-->
-  <div class=" header flex justify-center text-4xl">
-    <h3 class="header is-four-fifths-widescreen my-10 .text-shadow-lg">tinyNote</h3>
+  <header class=" #header flex justify-center text-4xl">
+    <h3 class=" app-name is-four-fifths-widescreen my-10 .text-shadow-lg">tinyNote</h3>
     
-  </div>
+  </header>
   <!--side bar showing todays date and previous 3 dates, consider 6 and responsive down based on screen size-->
 
     <div class="right-side flex content-center min-h-screen">
@@ -29,17 +29,17 @@
       <div class="container-left w-64 text-right">
 
 
-        <h3 class="today text-center text-base">Today</h3>
+        <h3 class="today text-center text-lg pt-6">Today</h3>
         <div class="grid grid-rows-1">
           <button class="btn">Today's Date</button>
         </div>
 
         <!--Buttons will recall from local storage to the corresponding date-->
-        <h3 class="flex previous text-center text-base">Previous Entries</h3>
+        <h3 class="previous text-center text-lg pt-9">Previous<br>Entries</h3>
         <div class="grid grid-rows-3 gap-2">
-          <button class="btn">Date 1</button>
-          <button class="btn">Date 2</button>
-          <button class="btn">Date 3</button>
+          <button class="btn rounded-r-lg">Date 1</button>
+          <button class="btn rounded-r-lg">Date 2</button>
+          <button class="btn rounded-r-lg">Date 3</button>
         </div>
       </div>
 
