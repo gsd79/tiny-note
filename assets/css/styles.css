@@ -81,25 +81,6 @@ textarea:focus {
 }
 /*end of left-side bar buttons and main content container text*/
 
-.emoji p {
-  
-  text-shadow: -1px 1px 1px 1px #8a307f;
-  font-size: 50px;
-  letter-spacing: -0.6px;
-  word-spacing: 2px;
-  color: #8a307f;
-  font-weight: bold;
-  font-style: oblique;
-  font-variant: normal;
-  text-shadow: 0.1px 0.1px 0px #8a307f;
-}
-
-.shareThoughts {
-  text-shadow: 1px 1px 1px 1px #8a307f;
-  -webkit-box-shadow: 5px 5px 15px 5px #000000;
-  box-shadow: 5px 5px 15px 5px #000000;
-}
-
 .emoji {
   display: flex;
   justify-content: center;
