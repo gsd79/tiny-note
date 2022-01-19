@@ -65,12 +65,10 @@ var createEntry = function(date, text, mood) {
   $(cardEl).append(cardBodyEl);
   $(cardBodyEl).append(cardTitleEl, cardTextEl, moodButtonEl);
   
-  saveRecord();
+
 }
 // TODO: function that saves this record to local storage. place that within the createEntry function.
-var saveRecord = function() {
-localStorage.setItem(createEntry,cardBodyEl);
-};
+
 
 // TODO: function that loads the information from local storage and displays it on the page.
 

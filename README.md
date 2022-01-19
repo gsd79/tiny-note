@@ -3,7 +3,7 @@ This is a application built using OneWeather and QuillJS Apis as well as Tailwin
 
 (screenshot will go here)
 
-##Features
+## Features
  *Ability to log and edit text which will be saved to localStorage. 
  *Ability to interact with 'mood buttons'
  *Local and current weather at the time of edit
@@ -15,11 +15,11 @@ This is a application built using OneWeather and QuillJS Apis as well as Tailwin
 *HTML
 *Javascript
 
- ##Contributors
+ ## Contributors
  *Grace Dringenburg
  *Nicola Marble 
  *Mark Flemming
  *Mitch McKinney
 
- ##Additional Notes
+ ## Additional Notes
  This application was built for the purpose of Butler University Executive Bootcamp and meets outline criteria.
