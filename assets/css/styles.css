@@ -8,17 +8,17 @@
  
      /*buttons for left-side bar*/
  .btn {
-     background: #79A7D3;
-     background-image: -webkit-linear-gradient(top, #8A307F, #8A307F);
-     background-image: -moz-linear-gradient(top, #8A307F, #8A307F);
-     background-image: -ms-linear-gradient(top, #8A307F, #8A307F);
-     background-image: -o-linear-gradient(top, #8A307F, #8A307F);
-     background-image: linear-gradient(to bottom, #8A307F, #8A307F);
+     background: #8a3080;
+     background-image: -webkit-linear-gradient(top, #79A7D3, #79A7D3);
+     background-image: -moz-linear-gradient(top, #79A7D3, #79A7D3);
+     background-image: -ms-linear-gradient(top, #79A7D3, #79A7D3);
+     background-image: -o-linear-gradient(top, #79A7D3, #79A7D3);
+     background-image: linear-gradient( bottom, #79A7D3, #79A7D3);
      -webkit-border-radius: 28;
      -moz-border-radius: 28;
      border-radius: 28px;
      font-family: Arial;
-     color: #79A7D3;
+     color: #8a3080;
      font-size: 20px;
      /*padding: 10px 20px 10px 20px;*/
      text-decoration: none;
@@ -147,7 +147,7 @@
    cursor:pointer;
    color:#79A7D3;
    font-family:Arial;
-   font-size:25px;
+   font: size 20px;
    font-weight:bold;
    padding:6px 24px;
    text-decoration:none;
@@ -161,7 +161,7 @@
    cursor:pointer;
    color:#79A7D3;
    font-family:Arial;
-   font-size:25px;
+   font-size:20px;
    font-weight:bold;
    padding:6px 24px;
    text-decoration:none;
@@ -176,7 +176,7 @@
    cursor:pointer;
    color:#79A7D3;
    font-family:Arial;
-   font-size:25px;
+   font-size:20px;
    font-weight:bold;
    padding:6px 24px;
    text-decoration:none;
