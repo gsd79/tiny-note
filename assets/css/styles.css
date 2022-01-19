@@ -190,4 +190,16 @@ text-shadow: .1px .1px 0px #b2573e;}
 	
 }
 
+@media (max-width:768px) {
+  .emoji{
+    display:flex;
+    flex-direction: column;
+    margin :10px;
+  }
+  .button-happy, {
+    margin-bottom: 10px;
+  }
+  .button-angry, .button-content, .button-sad {
+    margin-top: 10px;
+  }
 
