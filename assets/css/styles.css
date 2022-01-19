@@ -1,67 +1,3 @@
-<<<<<<< HEAD
-
- 
- 
- 
- body{
-    border: 20px double #79A7D3;
-     border-radius: 5px;}
- 
-     /*buttons for left-side bar*/
- .btn {
-     background: #8a3080;
-     background-image: -webkit-linear-gradient(top, #79A7D3, #79A7D3);
-     background-image: -moz-linear-gradient(top, #79A7D3, #79A7D3);
-     background-image: -ms-linear-gradient(top, #79A7D3, #79A7D3);
-     background-image: -o-linear-gradient(top, #79A7D3, #79A7D3);
-     background-image: linear-gradient( bottom, #79A7D3, #79A7D3);
-     -webkit-border-radius: 28;
-     -moz-border-radius: 28;
-     border-radius: 28px;
-     font-family: Arial;
-     color: #8a3080;
-     font-size: 20px;
-     /*padding: 10px 20px 10px 20px;*/
-     text-decoration: none;
-   }
- 
- /*header text styling and background color*/
- .app-name{  font-size: 87px;
-    color: #8a3080;
-    font-family: Arial;
-    text-shadow: 0px 0px 0 rgb(134,44,124),
-                 -1px 1px 0 rgb(130,40,120),
-                 -2px 2px 0 rgb(126,36,116),
-                 -3px 3px 0 rgb(122,32,112),
-                 -4px 4px 0 rgb(119,29,109),
-                 -5px 5px 0 rgb(115,25,105),
-                 -6px 6px 0 rgb(111,21,101),
-                 -7px 7px 0 rgb(107,17,97),
-                 -8px 8px 0 rgb(103,13,93),
-                 -9px 9px  0 rgb(99,9,89),
-                 -10px 10px 9px rgba(121,167,211,0.17),
-                 -10px 10px 1px rgba(121,167,211,0.5),
-                 0px 0px 9px rgba(121,167,211,.2); #EEEEEE, 4px 3px 1px #7A2048, 3px 4px 1px #EEEEEE, 5px 4px 1px #7A2048, 4px 5px 1px #EEEEEE, 6px 5px 1px #7A2048, 5px 6px 1px #EEEEEE, 7px 6px 1px #7A2048, -33px -18px 0px rgba(64,95,207,0);
- }
- 
-   
-<<<<<<< HEAD
-	background-color:#b2573e;
-	border-radius:6px;
-	border:1px solid #b2b8ad;
-	display:inline-block;
-	cursor:pointer;
-	color:#3E99B2;
-	font-family:Arial;
-	font-size:25px;
-	font-weight:bold;
-	padding:6px 24px;
-	
-}
-
-.button-happy:hover{
-  background: rgba(0, 255, 51, .6);
-=======
 body {
   border: 20px double #79a7d3;
   border-radius: 5px;
@@ -122,7 +58,6 @@ textarea:focus {
 .img-container {
   display: flex;
   justify-content: center;
->>>>>>> feature/quill_api
 }
 /*left side bar buttons and main content container text*/
 .share-thought, .mood-title {
@@ -146,76 +81,6 @@ textarea:focus {
 }
 /*end of left-side bar buttons and main content container text*/
 
-<<<<<<< HEAD
-.button-sad:hover{
-  background: rgba(119,55,124);
-}
-.button-angry:hover{
-  background: rgba(194,39,39);
-}
-.button-content:hover{
-  background: rgba(58,105,202);
-}
-
-.button-sad {
-  background-color:#b2573e;
-	border-radius:6px;
-	border:1px solid #b2b8ad;
-	display:inline-block;
-	cursor:pointer;
-	color:#3E99B2;
-	font-family:Arial;
-	font-size:25px;
-	font-weight:bold;
-	padding:6px 24px;
-	text-decoration:none;
-}
-
-
-.button-angry {
-  background-color:#b2573e;
-	border-radius:6px;
-	border:1px solid #b2b8ad;
-	display:inline-block;
-	cursor:pointer;
-	color:#3E99B2;
-	font-family:Arial;
-	font-size:25px;
-	font-weight:bold;
-	padding:6px 24px;
-	text-decoration:none;
-	;
-}
-
-.button-content {
-  background-color:#b2573e;
-	border-radius:6px;
-	border:1px solid #b2b8ad;
-	display:inline-block;
-	cursor:pointer;
-	color:#3E99B2;
-	font-family:Arial;
-	font-size:25px;
-	font-weight:bold;
-	padding:6px 24px;
-	text-decoration:none;
-	
-}
-
-@media (max-width:768px) {
-  .emoji{
-    display:flex;
-    flex-direction: column;
-    margin :10px;
-  }
-  .button-happy, {
-    margin-bottom: 10px;
-  }
-  .button-angry, .button-content, .button-sad {
-    margin-top: 10px;
-  }
-
-=======
  /*textarea shadowing box*/    
  textarea {
      appearance:none;
@@ -356,8 +221,6 @@ textarea:focus {
  }
  
  
->>>>>>> e6707eb2aaca5ee9d88fcf440e46154e173eedd7
-=======
 .emoji p {
   
   text-shadow: -1px 1px 1px 1px #8a307f;
@@ -429,5 +292,17 @@ margin-right: 0px;
   background: rgba(58, 105, 202);
 }
 
+@media (max-width:768px) {
+  .emoji{
+    display:flex;
+    flex-direction: column;
+    margin :10px;
+  }
+  .button-happy, {
+    margin-bottom: 10px;
+  }
+  .button-angry, .button-content, .button-sad {
+    margin-top: 10px;
+  }
 
->>>>>>> feature/quill_api
+
