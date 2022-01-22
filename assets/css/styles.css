@@ -118,5 +118,20 @@ textarea:focus {
   background: rgba(58, 105, 202);
 }
 
+.ql-toolbar.ql-snow {
+  
+  box-sizing: border-box;
+  font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  padding: 8px;
+  text-align: center;
+  width: 800px;
+  margin:auto;
+  display:flex; 
+  justify-content: space-evenly; 
+  }
 
-
+.editor-container{
+  width:808px;
+  margin:auto;
+  border: 3px double  #79a7d3;
+}

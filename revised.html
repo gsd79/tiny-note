@@ -66,15 +66,16 @@
                
         <!--Journal entry -->
         <div class= "journal-container">
-          <div class="space-y-5 justify-center journal-entry">
+          <div class="space-y-5 justify-center journal-entry ">
             <label for="exampleFormControlTextarea1" class="form-label inline-block mb-2 share-thought-title">Share your thoughts</label>
+            <div class="editor-container border-double border-4 border-indigo-600  my-auto">
+              <div id="editor" style=height:200px;width:800px;margin:auto;></div>
 
-              <div id="editor" style=height:200px>stuff and things</div>
-
-          </div>
+          
+        </div> 
         </div>
 
-           <div id="mood-selector" class="form-group mt-4 d-flex align-items-center">
+          <div id="mood-selector" class="form-group mt-4 d-flex align-items-center">
           <h2 class="mood-header d-inline mr-5">Mood: </h2>
           <span class="button-wrapper inline">
             <button id="happy-button" class="happy mood-button mr-3 btn btn-light border" type="button">Happy 😁</button>
