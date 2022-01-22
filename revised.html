@@ -74,16 +74,19 @@
           </div>
         </div>
 
-        <div class="emoji-bar">
-          <div class="mood-title">MOOD:</div>
-            <button id="button-happy" class="mood-button">Happy <br>
-              😊</button>
-            <button id="button-sad" class="mood-button">Sad <br> 
-              😢</button>
-            <button id="button-angry" class="mood-button">Angry <br>
-              😡</button>
-            <button id="button-content" class="mood-button">Content <br>
-              😌</button>
+           <div id="mood-selector" class="form-group mt-4 d-flex align-items-center">
+          <h2 class="mood-header d-inline mr-5">Mood: </h2>
+          <span class="button-wrapper inline">
+            <button id="happy-button" class="happy mood-button mr-3 btn btn-light border" type="button">Happy 😁</button>
+            <button id="sad-button" class="sad mood-button mr-3 btn btn-light border" type="button">Sad 😞</button>
+            <button id="angry-button" class="angry mood-button mr-3 btn btn-light border" type="button">Angry 😡</button>
+            <button id="content-button" class="content mood-button mr-3 btn btn-light border" type="button">Content 🙂</button>
+          </span>
+        </div>
+
+        <div id="submission" class="form-group align-items-center">
+          <button id="submit-button" class="btn btn-primary submit-btn w-100" type="submit">Submit</button>
+        </div>
       </div>
     
     
