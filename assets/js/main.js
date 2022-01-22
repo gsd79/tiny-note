@@ -13,7 +13,7 @@ var displayDate = function() {
 };
 
 // add class that indicates which button has been selected
-$("form").on("click", ".mood-button", function() {
+$("#entry-form").on("click", ".mood-button", function() {
 
   if ($(this).siblings("selected")) {
     $(this).siblings().removeClass("selected");
