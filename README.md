@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# tiny-note
-=======
 # Tiny Note
 This is a application built using OneWeather and QuillJS Apis as well as Tailwind css framework. You can check out the live link here: https://gsd79.github.io/tiny-note/
 
@@ -26,4 +23,3 @@ This is a application built using OneWeather and QuillJS Apis as well as Tailwin
 
  ## Additional Notes
  This application was built for the purpose of Butler University Executive Bootcamp and meets outline criteria.
->>>>>>> feature/quill_api

@@ -23,7 +23,7 @@ $("form").on("click", ".mood-button", function() {
 
 
 // event handler that submits the form and saves to local storage
-$("form").on("submit", function(event) {
+$("#entry-form").on("submit", function(event) {
   event.preventDefault();
 
   // grab date 
