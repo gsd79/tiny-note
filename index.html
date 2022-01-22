@@ -4,68 +4,92 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<<<<<<< Updated upstream
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="./assets/css/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Righteous&family=Staatliches&display=swap" rel="stylesheet">
 
 
-=======
-
-  <link rel="stylesheet" href="./assets/css/styles.css">
-
-  <script src="https://cdn.tailwindcss.com"></script>  
->>>>>>> Stashed changes
   <!--do I have to set up in the header or can we set up a separate JS and CSS file?-->
   <!--how can I add fonts to entire page outside of Journal text entry?-->
 
-  <title>Tiny Note</title>
-  <!--<link rel="stylesheet" href="style.css" />-->
+  <title>tinyNote</title>
+
+  
 </head>
 
-<body class="overflow-hidden items-center">
+<body>
   <!--header centered-->
-  <div class="flex justify-center text-6xl ">
-    <h3 class=" text-blue-200 pt- m-1 is-four-fifths-widescreen header ">
-    tinyNote</h3>
+  <div class="flex justify-center text-4xl">
+    <h3 class="is-four-fifths-widescreen my-10 .text-shadow-lg app-name">tinyNote</h3>
+    
   </div>
   <!--side bar showing todays date and previous 3 dates, consider 6 and responsive down based on screen size-->
-  <div class="left-sidebar"></div>
-    <div class="flex content-center min-h-screen">
-      <div class="w-64 bg-gray-100 border-r text-right">
+
+    <div class="right-side flex content-center min-h-screen">
+      
+      <div class="container-left w-64 text-right">
 
 
-        <h3 class="text-center text-lg pt-6">Today</h3>
+        <h3 class="text-center pt-6 today-title">Today</h3>
+       
         <div class="grid grid-rows-1">
-          <button class="btn text-yellow-700 text-xl bg-blue-200 no-underline">Today's Date</button>
+          <button class="btn">Today's Date</button>
         </div>
 
         <!--Buttons will recall from local storage to the corresponding date-->
-<<<<<<< Updated upstream
-        <h3 class="text-center text-lg pt-6">Previous Entries</h3>
+        <h3 class="text-center pt-9 previous-title">Previous Entries</h3>
         <div class="grid grid-rows-3 gap-2">
-          <button class=" btn text-yellow-700 text-xl bg-blue-200 no-underline">Date 1</button>
-=======
-        <h3 class="text-center text-lg pt-20">Previous Entries</h3>
-        <div class="grid grid-rows-3 gap-2">
-          <button class="btn shadow-cyan-500/50 text-yellow-700 text-xl bg-blue-200 no-underline">Date 1</button>
->>>>>>> Stashed changes
-          <button class=" btn text-yellow-700 text-xl bg-blue-200 no-underline">Date 2</button>
-          <button class="btn text-yellow-700 text-xl bg-blue-200 no-underline">Date 3</button>
+          <button class="btn">Date 1</button>
+          <button class="btn">Date 2</button>
+          <button class="btn">Date 3</button>
         </div>
       </div>
 
       <!-- right side -->
 
       <!--This is where APIs go-->
-      <div class="flex space-x-4 flex-col mt-20 content-center">
-        <div class="span-2">
-          <img src="assets/css/placeholder_img.png" alt="placeholder for Spotify">
+
+      <div class="flex flex-col content-center right-container">
+
+
+        <div class="space-x-20 img-container">
+          <div class="search-wrapper border-bottom">
+            <h2>Search for a City:</h2>
+          <!--search entry-->
+            <form id="search-form" class="d-flex flex-column form-group">
+              <input name="searchterm" id="searchterm" type="text" autofocus="true" placeholder="San Diego" class="mb-3 search-keyword" />
+              <button id ="submit-btn" type="submit" class="btn btn-primary gradient nice-border">Search</button>
+            </form>
+          
+  
+          <!-- search history-->
+          
+        
+          
+          
+       
+      </div>
+      <!-- generated area-->
+  
+      <div id="right" class="col-9 content-wrapper align-items-start">
+        <section id="forecasts" class="forecast-wrapper flex flex-col mx-auto">
+          <!-- dynamically created information for today's forecast will appear here-->
+  
+          <!-- dynamically created information for the 5-day forecast will appear here-->
+  
+        </section>
+      </div>
+          
         </div>
-        <div class="">
-          <div overflow-hidden items-center></div>
-          <div class="text-center">
-            <label for="exampleFormControlTextarea1" class="form-label inline-block mb-2">Share your thoughts</label>
-            <textarea class="
+        <!--Journal entry -->
+        <div>
+          <div class="space-y-5 justify-center share-thought">
+
+            <label for="exampleFormControlTextarea1" class="share-thought form-label inline-block mb-2">Share your thoughts</label>
+
+            <textarea id="content-box" class="
           form-control
           block
           w-full
@@ -80,29 +104,35 @@
           transition
           ease-in-out
           m-0
-          focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none
-         id="exampleFormControlTextarea1" rows="3" placeholder="A penny for your thoughts"></textarea>       
-        
-<<<<<<< Updated upstream
-            <img class= "items-right" src="assets/css/placeholder_img.png" alt="placeholder for weather app">
-=======
-            <img class=  src="assets/css/placeholder_img.png" alt="placeholder for weather app">
->>>>>>> Stashed changes
-          
+          focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none"  rows="3" placeholder="A penny for your thoughts"></textarea>
+          </div>
         </div>
-        <!--Journal entry -->
-        <div class="overflow-hidden items-center">
-          
-         
+        <div class="emoji">
+          <div class="mood-title">MOOD:</div>
+
+          <button class="button-happy">Happy <br>
+            😊</button>
+          <button class="button-sad">Sad <br> 
+            😢</button>
+          <button class="button-angry">Angry <br>
+            😡</button>
+          <button class="button-content">Content <br>
+            😌</button>
       </div>
+    
+
+    
       <!--Emoji selection bar-->
+
     </div>
   </div>
   </div>
   </div>
+  <!--jquery cdn-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- moment.js cdn-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
-
-
-
 
 </html>
