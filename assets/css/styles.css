@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body{
   border: 20px double #79A7D3;
    border-radius: 5px;}
@@ -135,3 +136,129 @@ background: rgba(194,39,39);
 background: rgba(58,105,202);
 }
 
+=======
+body {
+  border: 20px double #79a7d3;
+  border-radius: 5px;
+  font-family: 'Righteous', cursive;
+}
+
+/*buttons for left-side bar*/
+.btn {
+  background: #8a3080;
+  background-image: -webkit-linear-gradient(top, #79a7d3, #79a7d3);
+  background-image: -moz-linear-gradient(top, #79a7d3, #79a7d3);
+  background-image: -ms-linear-gradient(top, #79a7d3, #79a7d3);
+  background-image: -o-linear-gradient(top, #79a7d3, #79a7d3);
+  background-image: linear-gradient(bottom, #79a7d3, #79a7d3);
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px 0px 0px 28px;
+  font-family: Arial;
+  color: #8a3080;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  margin-left: 10px;
+}
+
+/*header text styling and background color*/
+.app-name {
+  font-size: 87px;
+  color: #8a3080;
+  font-family: 'Righteous', cursive;
+  text-shadow: 0px 0px 0 rgb(134, 44, 124), -1px 1px 0 rgb(130, 40, 120),
+
+  -33px -18px 0px rgba(64,95,207,0);
+}
+
+/*textarea shadowing box*/
+textarea {
+  appearance: none;
+  background: none;
+  -webkit-box-shadow: 5px 5px 15px 5px #000000;
+  box-shadow: 5px 5px 15px 5px #000000;
+}
+textarea:focus {
+  outline: none;
+}
+.right-container {
+  flex: 0 0 70%;
+  border-radius: 70 70px 0 0;
+  overflow: hidden;
+  border: 5px solid #8a307f;
+  border-radius: 5px 5px 5px 5px;
+}
+
+/*right-side bar*/
+
+/*end right-side bar*/
+
+.img-container {
+  display: flex;
+  justify-content: center;
+}
+/*left side bar buttons and main content container text*/
+.share-thought, .mood-title {
+  margin: 30px;  
+  text-shadow: -1px 1px 1px 1px #8a307f;
+  font-size: 30px;
+  letter-spacing: -0.6px;
+  word-spacing: 2px;
+  color: #8a307f;
+  font-weight: bold;
+}
+.previous-title, .today-title {
+  margin-bottom: 30px;  
+  text-shadow: -1px 1px 1px 1px #8a307f;
+  font-size: 20px;
+  letter-spacing: -0.6px;
+  word-spacing: 2px;
+  color: #8a307f;
+  font-weight: bold;
+ 
+<<<<<<< H
+}
+/*end of left-side bar buttons and main content container text*/
+
+.emoji {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  
+}
+
+.button-happy, .button-sad, .button-angry, .button-content {
+  background-color: #8a307f;
+  border-radius: 6px;
+  border: 1px solid #b2b8ad;
+  display: inline-block;
+  cursor: pointer;
+  color: #79a7d3;
+  font-size: 25px;
+  width: 120px;
+  height: 120px;
+  padding: 20px;
+  text-align:center;
+  margin-right: 40px;
+}
+
+
+.button-happy:hover {
+  background: rgba(0, 255, 51, 0.6);
+}
+
+.button-sad:hover {
+  background: rgb(216,185,255);  
+}
+.button-angry:hover {
+  background: rgba(194, 39, 39);
+}
+.button-content:hover {
+  background: rgba(58, 105, 202);
+}
+
+
+
+>>>>>>> 6ebe462e5c70a271271946a2b3c996c437b59eea
