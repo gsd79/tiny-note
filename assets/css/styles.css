@@ -112,7 +112,7 @@ textarea:focus {
 }
 
 .button-sad:hover {
-  background: rgba(119, 55, 124);
+  background: rgb(216,185,255);  
 }
 .button-angry:hover {
   background: rgba(194, 39, 39);
@@ -120,184 +120,21 @@ textarea:focus {
 .button-content:hover {
   background: rgba(58, 105, 202);
 }
- 
 
- body{
-    border: 20px double #79A7D3;
-     border-radius: 5px;}
- 
-     /*buttons for left-side bar*/
- .btn {
-     background: #8a3080;
-     background-image: -webkit-linear-gradient(top, #79A7D3, #79A7D3);
-     background-image: -moz-linear-gradient(top, #79A7D3, #79A7D3);
-     background-image: -ms-linear-gradient(top, #79A7D3, #79A7D3);
-     background-image: -o-linear-gradient(top, #79A7D3, #79A7D3);
-     background-image: linear-gradient( bottom, #79A7D3, #79A7D3);
-     -webkit-border-radius: 28;
-     -moz-border-radius: 28;
-     border-radius: 28px;
-     font-family: Arial;
-     color: #8a3080;
-     font-size: 20px;
-     /*padding: 10px 20px 10px 20px;*/
-     text-decoration: none;
-   }
- 
- /*header text styling and background color*/
- .app-name{  font-size: 87px;
-    color: #8a3080;
-    font-family: Arial;
-    text-shadow: 0px 0px 0 rgb(134,44,124),
-                 -1px 1px 0 rgb(130,40,120),
-                 -2px 2px 0 rgb(126,36,116),
-                 -3px 3px 0 rgb(122,32,112),
-                 -4px 4px 0 rgb(119,29,109),
-                 -5px 5px 0 rgb(115,25,105),
-                 -6px 6px 0 rgb(111,21,101),
-                 -7px 7px 0 rgb(107,17,97),
-                 -8px 8px 0 rgb(103,13,93),
-                 -9px 9px  0 rgb(99,9,89),
-                 -10px 10px 9px rgba(121,167,211,0.17),
-                 -10px 10px 1px rgba(121,167,211,0.5),
-                 0px 0px 9px rgba(121,167,211,.2)
- }
-   
- /*textarea shadowing box*/    
- textarea {
-     appearance:none;
-     background:none;
-     -webkit-box-shadow: 5px 5px 15px 5px #000000; 
-     box-shadow: 5px 5px 15px 5px #000000;
-     }
- textarea:focus {
-     outline:none;
-     }
- .rightContainer {
-         flex: 0 0 70%;
-         border-radius:70 70px 0 0;
-         overflow: hidden;
-         border: 5px solid #8A307F;    
-         border-radius: 5px 5px 5px 5px;
-       }
-         
- /*right-side bar*/      
- 
- /*end right-side bar*/
-       
- .imgContainer {
-         display: flex;
-         justify-content: center;
-       }
- /*left side bar buttons and main content container text*/  
- .shareThought, .mood, .previous, .today {
-         margin: 50px;;
-         font-family: "Lucida Console", Monaco, monospace;
-         text-shadow: -1px 1px 1px 1px #8A307F;
-         font-size: 30px;
-         letter-spacing: -0.6px;
-         word-spacing: 2px;
-         color: #8A307F;
-         font-weight: bold;
-         font-style: oblique;
-         font-variant: normal;
-         
-         
-       }
-     /*end of left-side bar buttons and main content container text*/
- 
- .emoji p{
- font-family: "Lucida Console", Monaco, monospace;
- text-shadow: -1px 1px 1px 1px #8A307F;
- font-size: 50px;
- letter-spacing: -0.6px;
- word-spacing: 2px;
- color: #8A307F;
- font-weight: bold;
- font-style: oblique;
- font-variant: normal;
- text-shadow: .1px .1px 0px #8A307F;}
- 
- .shareThoughts{
-   text-shadow: 1px 1px 1px 1px #8A307F;
-   -webkit-box-shadow: 5px 5px 15px 5px #000000; 
-   box-shadow: 5px 5px 15px 5px #000000;}
-       
- .emoji {
-         
-         display: flex;
-         justify-content: space-evenly;
-       }
-     
-     .button-happy {
-    
-   background-color:#8A307F;
-   border-radius:6px;
-   border:1px solid #b2b8ad;
-   display:inline-block;
-   cursor:pointer;
-   color:#79A7D3;
-   font-family:Arial;
-   font-size:25px;
-   font-weight:bold;
-   padding:6px 24px;
-   
- }
- 
- .button-happy:hover{
-   background: rgba(0, 255, 51, .6);
- }
- 
- .button-sad:hover{
-   background: rgba(119,55,124);
- }
- .button-angry:hover{
-   background: rgba(194,39,39);
- }
- .button-content:hover{
-   background: rgba(58,105,202);
- }
- 
- .button-sad {
-   background-color:#8A307F;
-   border-radius:6px;
-   border:1px solid #b2b8ad;
-   display:inline-block;
-   cursor:pointer;
-   color:#79A7D3;
-   font-family:Arial;
-   font: size 20px;
-   font-weight:bold;
-   padding:6px 24px;
-   text-decoration:none;
- }
- 
- .button-angry {
-   background-color:#8A307F;
-   border-radius:6px;
-   border:1px solid #b2b8ad;
-   display:inline-block;
-   cursor:pointer;
-   color:#79A7D3;
-   font-family:Arial;
-   font-size:20px;
-   font-weight:bold;
-   padding:6px 24px;
-   text-decoration:none;
-   ;
- }
- 
- .button-content {
-   background-color:#8A307F;
-   border-radius:6px;
-   border:1px solid #b2b8ad;
-   display:inline-block;
-   cursor:pointer;
-   color:#79A7D3;
-   font-family:Arial;
-   font-size:20px;
-   font-weight:bold;
-   padding:6px 24px;
-   text-decoration:none;
-   
- }
+.ql-toolbar.ql-snow {
+  
+  box-sizing: border-box;
+  font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  padding: 8px;
+  text-align: center;
+  width: 800px;
+  margin:auto;
+  display:flex; 
+  justify-content: space-evenly; 
+  }
+
+.editor-container{
+  width:808px;
+  margin:auto;
+  border: 3px double  #79a7d3;
+}
