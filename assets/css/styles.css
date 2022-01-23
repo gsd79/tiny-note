@@ -120,7 +120,7 @@ padding:6px 24px;
 
 }
 body {
-  border: 20px double #79a7d3;
+    border: 20px double #79a7d3;
   border-radius: 5px;
   font-family: 'Righteous', cursive;
 }
