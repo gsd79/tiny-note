@@ -1,14 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="./assets/css/styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Righteous&family=Staatliches&display=swap" rel="stylesheet">
-  <link href="https://cdn.quilljs.com/1.3.7/quill.snow.css" rel="stylesheet"> 
-    <script src="https://cdn.quilljs.com/1.3.7/quill.js"></script>
-    <title>tinyNote</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Righteous&family=Staatliches&display=swap"
+    rel="stylesheet">
+  <link href="https://cdn.quilljs.com/1.3.7/quill.snow.css" rel="stylesheet">
+  <script src="https://cdn.quilljs.com/1.3.7/quill.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'main': '#8a307f'
+          }
+        }
+      }
+    }
+  </script>
+  <title>tinyNote</title>
 </head>
 
 <body>
@@ -18,91 +32,92 @@
   </div>
   <!--side bar showing todays date and previous 3 dates, consider 6 and responsive down based on screen size-->
 
-    <div class="flex content-center min-h-screen main-container">
-      <div class="w-64 text-right left-container">
-        <h3 class="text-center pt-6 today-title">Today</h3>
-          <div class="grid grid-rows-1 today-date-container">
-            <button class="btn">Today's Date</button>
-          </div>
+  <div class="flex content-center min-h-screen main-container">
+    <div class="w-64 text-right left-container">
+      <h3 class="text-center pt-6 today-title">Today</h3>
+      <div class="grid grid-rows-1 today-date-container">
+        <button class="btn hover:skew-y-6 todays-date"></button>
+      </div>
 
-        <!--Buttons will recall from local storage to the corresponding date-->
-        <h3 class="text-center pt-9 previous-title">Previous Entries</h3>
-          <div class="grid grid-rows-3 gap-2 previous-date-container">
-            <button class="btn">Date 1</button>
-            <button class="btn">Date 2</button>
-            <button class="btn">Date 3</button>
-          </div>
-        </div>
+      <!--Buttons will recall from local storage to the corresponding date-->
+      <h3 class="text-center pt-9 previous-title">Previous Entries</h3>
+      <div class="grid grid-rows-3 gap-2 previous-date-container">
+        <button class="btn hover:skew-y-6">Date 1</button>
+        <button class="btn hover:skew-y-6">Date 2</button>
+        <button class="btn hover:skew-y-6">Date 3</button>
+      </div>
+    </div>
 
-      <!-- right side/main body -->
+    <!-- right side/main body -->
 
-      <!--This is where APIs go-->
+    <!--This is where APIs go-->
 
-      <div class="flex flex-col content-center right-container">
-        <!--weather widget-->
-        <div class="space-x-20 weather-container"> 
-          <div id="weather-section" class="flex flex-column justify-content-center  mb-3">
-            <div class="search-wrapper border-bottom">
-              <h2>Search for a City:</h2>
+    <div class="flex flex-col content-center right-container">
+      <!--weather widget-->
+      <div class="space-x-20 weather-container">
+        <div id="weather-section" class="flex flex-column justify-content-center  mb-3">
+          <div class="search-wrapper border-bottom">
+            <h2>Search for a City:</h2>
             <!--search entry-->
-              <form id="search-form" class="d-flex flex-column form-group">
-                <input name="searchterm" id="searchterm" type="text" autofocus="true" placeholder="San Diego" class="mb-3 search-keyword" />
-                <button id ="submit-btn" type="submit" class="btn btn-primary gradient nice-border">Search</button>
-              </form>
-            </div>
-            
-          </div> 
-    
-          <div id="weather-report" class="content-wrapper align-items-start border mb-2">
-            <section id="forecasts" class="forecast-wrapper d-flex flex-column ml-2">
-              <!-- dynamically created information for today's forecast will appear here-->
-      
-              <!-- dynamically created information for the 5-day forecast will appear here-->
-      
-            </section>
+            <form id="search-form" class="d-flex flex-column form-group">
+              <input name="searchterm" id="searchterm" type="text" autofocus="true" placeholder="San Diego"
+                class="mb-3 search-keyword" />
+              <button id="submit-btn" type="submit" class="btn btn-primary gradient nice-border">Search</button>
+            </form>
           </div>
 
         </div>
-               
+
         <!--Journal entry -->
-        <div class= "journal-container">
+        <div class="journal-container">
           <div class="space-y-5 justify-center journal-entry ">
-            <label for="exampleFormControlTextarea1" class="form-label inline-block mb-2 share-thought-title">Share your thoughts</label>
+            <label for="exampleFormControlTextarea1" class="form-label inline-block mb-2 share-thought-title">Share your
+              thoughts</label>
             <div class="editor-container border-double border-4 border-indigo-600  my-auto">
               <div id="editor" style=height:200px;width:800px;margin:auto;></div>
 
-          
-        </div> 
-        </div>
+
+            </div>
+          </div>
 
           <div id="mood-selector" class="form-group mt-4 d-flex align-items-center">
-          <h2 class="mood-header d-inline mr-5">Mood: </h2>
-          <span class="button-wrapper inline">
-            <button id="happy-button" class="happy mood-button mr-3 btn btn-light border" type="button">Happy 😁</button>
-            <button id="sad-button" class="sad mood-button mr-3 btn btn-light border" type="button">Sad 😞</button>
-            <button id="angry-button" class="angry mood-button mr-3 btn btn-light border" type="button">Angry 😡</button>
-            <button id="content-button" class="content mood-button mr-3 btn btn-light border" type="button">Content 🙂</button>
-          </span>
+            <h2 class="mood-header d-inline mr-5">Mood: </h2>
+            <span class="button-wrapper inline">
+              <button id="happy-button"
+                class="mood-button bg-main mr-3 btn btn-light border hover:bg-green-400 hover:skew-y-6"
+                type="button">Happy 😁</button>
+              <button id="sad-button"
+                class="mood-button bg-main mr-3 btn btn-light border hover:bg-purple-400 hover:skew-y-6"
+                type="button">Sad
+                😞</button>
+              <button id="angry-button"
+                class="mood-button bg-main mr-3 btn btn-light border hover:bg-red-400 hover:skew-y-6"
+                type="button">Angry
+                😡</button>
+              <button id="content-button"
+                class="mood-button bg-main mr-3 btn btn-light border hover:bg-blue-400 hover:skew-y-6"
+                type="button">Content 🙂</button>
+            </span>
+          </div>
+
+          <div id="submission" class="form-group align-items-center">
+            <button id="submit-button" class="btn btn-primary submit-btn w-100" type="submit">Submit</button>
+          </div>
         </div>
 
-        <div id="submission" class="form-group align-items-center">
-          <button id="submit-button" class="btn btn-primary submit-btn w-100" type="submit">Submit</button>
-        </div>
+
+        <!--Emoji selection bar-->
+
       </div>
-    
-    
-      <!--Emoji selection bar-->
-
     </div>
-  </div>
   </div>
   </div>
   <!--jquery cdn-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
   <!-- moment.js cdn-->
   <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
   <script src="/assets/js/main.js"></script>
-  <script src="/assets/js/script.js"></script>
 
 </body>
 

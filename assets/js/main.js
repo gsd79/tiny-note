@@ -3,7 +3,7 @@ var entries = {};
 
 // function that displays date on page
 var displayDate = function() {
-  var date = moment().format("dddd, MMMM Do, YYYY");
+  var date = moment().format("dddd, MMMM Do YYYY");
 
   var dateEl = $("<p>")
   .addClass("date-el")
@@ -65,6 +65,7 @@ var createEntry = function(date, text, mood) {
   $(cardEl).append(cardBodyEl);
   $(cardBodyEl).append(cardTitleEl, cardTextEl, moodButtonEl);
   
+  
 }
 // TODO: function that saves this record to local storage. place that within the createEntry function.
 
@@ -89,7 +90,7 @@ let date = moment();
 let dateDisplay = moment().format("MM/D/YYYY");
 
 $("document").ready(function() {
-  loadSearchHistory();
+  
 });
 
 var formSubmitHandler = function(event) {
