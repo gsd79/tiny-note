@@ -3,13 +3,13 @@ var entries = {};
 
 // function that displays date on page
 var displayDate = function() {
-  var date = moment().format("dddd, MMMM Do YYYY, h:mm a");
+  var date = moment().format("dddd, MMMM Do, YYYY");
 
   var dateEl = $("<p>")
-  .addClass("date-el font-weight-bold")
+  .addClass("date-el")
   .text(date);
 
-  $(".header").append(dateEl)
+  $(".todays-date").append(dateEl)
 };
 
 // add class that indicates which button has been selected

@@ -3,6 +3,9 @@ body {
   border-radius: 5px;
   font-family: 'Righteous', cursive;
 }
+.selected {
+  border: 5px solid pink;
+}
 
 /*buttons for left-side bar*/
 .btn {
@@ -77,8 +80,6 @@ textarea:focus {
   word-spacing: 2px;
   color: #8a307f;
   font-weight: bold;
- 
-<<<<<<< HEAD
 }
 /*end of left-side bar buttons and main content container text*/
 
@@ -119,11 +120,8 @@ textarea:focus {
 .button-content:hover {
   background: rgba(58, 105, 202);
 }
-
-
-=======
  
- 
+
  body{
     border: 20px double #79A7D3;
      border-radius: 5px;}
@@ -162,97 +160,9 @@ textarea:focus {
                  -9px 9px  0 rgb(99,9,89),
                  -10px 10px 9px rgba(121,167,211,0.17),
                  -10px 10px 1px rgba(121,167,211,0.5),
-                 0px 0px 9px rgba(121,167,211,.2); #EEEEEE, 4px 3px 1px #7A2048, 3px 4px 1px #EEEEEE, 5px 4px 1px #7A2048, 4px 5px 1px #EEEEEE, 6px 5px 1px #7A2048, 5px 6px 1px #EEEEEE, 7px 6px 1px #7A2048, -33px -18px 0px rgba(64,95,207,0);
+                 0px 0px 9px rgba(121,167,211,.2)
  }
- 
    
-<<<<<<< HEAD
-	background-color:#b2573e;
-	border-radius:6px;
-	border:1px solid #b2b8ad;
-	display:inline-block;
-	cursor:pointer;
-	color:#3E99B2;
-	font-family:Arial;
-	font-size:25px;
-	font-weight:bold;
-	padding:6px 24px;
-	
-}
-
-.button-happy:hover{
-  background: rgba(0, 255, 51, .6);
-}
-
-.button-sad:hover{
-  background: rgba(119,55,124);
-}
-.button-angry:hover{
-  background: rgba(194,39,39);
-}
-.button-content:hover{
-  background: rgba(58,105,202);
-}
-
-.button-sad {
-  background-color:#b2573e;
-	border-radius:6px;
-	border:1px solid #b2b8ad;
-	display:inline-block;
-	cursor:pointer;
-	color:#3E99B2;
-	font-family:Arial;
-	font-size:25px;
-	font-weight:bold;
-	padding:6px 24px;
-	text-decoration:none;
-}
-
-
-.button-angry {
-  background-color:#b2573e;
-	border-radius:6px;
-	border:1px solid #b2b8ad;
-	display:inline-block;
-	cursor:pointer;
-	color:#3E99B2;
-	font-family:Arial;
-	font-size:25px;
-	font-weight:bold;
-	padding:6px 24px;
-	text-decoration:none;
-	;
-}
-
-.button-content {
-  background-color:#b2573e;
-	border-radius:6px;
-	border:1px solid #b2b8ad;
-	display:inline-block;
-	cursor:pointer;
-	color:#3E99B2;
-	font-family:Arial;
-	font-size:25px;
-	font-weight:bold;
-	padding:6px 24px;
-	text-decoration:none;
-	
-}
-
-@media (max-width:768px) {
-  .emoji{
-    display:flex;
-    flex-direction: column;
-    margin :10px;
-  }
-  .button-happy, {
-    margin-bottom: 10px;
-  }
-  .button-angry, .button-content, .button-sad {
-    margin-top: 10px;
-  }
-
-=======
  /*textarea shadowing box*/    
  textarea {
      appearance:none;
@@ -391,7 +301,3 @@ textarea:focus {
    text-decoration:none;
    
  }
- 
- 
->>>>>>> e6707eb2aaca5ee9d88fcf440e46154e173eedd7
->>>>>>> 4f0a203e3a6639caaa1e8405f70d2e7df38f9eae
