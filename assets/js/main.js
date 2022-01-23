@@ -90,7 +90,7 @@ let date = moment();
 let dateDisplay = moment().format("MM/D/YYYY");
 
 $("document").ready(function() {
-  loadSearchHistory();
+  
 });
 
 var formSubmitHandler = function(event) {
