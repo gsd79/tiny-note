@@ -3,22 +3,17 @@ var entries = {};
 
 // function that displays date on page
 var displayDate = function() {
-  var date = moment().format("dddd, MMMM Do YYYY, h:mm a");
+  var date = moment().format("dddd, MMMM Do YYYY");
 
   var dateEl = $("<p>")
   .addClass("date-el font-weight-bold")
   .text(date);
 
-  $(".header").append(dateEl)
+  $(".todays-date").append(dateEl)
 };
 
-<<<<<<< HEAD
-// add class that indicates which mood button has been selected
-$("form").on("click", ".mood-button", function() {
-=======
 // add class that indicates which button has been selected
 $("#entry-form").on("click", ".mood-button", function() {
->>>>>>> c3d90973e441c456871e2f7d3f1c9a04256cd60a
 
   if ($(this).siblings("selected")) {
     $(this).siblings().removeClass("selected");
@@ -28,12 +23,7 @@ $("#entry-form").on("click", ".mood-button", function() {
 
 
 // event handler that submits the form and saves to local storage
-<<<<<<< HEAD
-// TODO: capture weather information and inspirational quote as well
-$("form").on("submit", function(event) {
-=======
 $("#entry-form").on("submit", function(event) {
->>>>>>> c3d90973e441c456871e2f7d3f1c9a04256cd60a
   event.preventDefault();
 
   // grab date 
@@ -49,11 +39,7 @@ $("#entry-form").on("submit", function(event) {
   createEntry(date,text,mood);
 })
 
-<<<<<<< HEAD
-//  function that creates a record for that day's entry
-=======
 // TODO: function that creates a record for that day's entry
->>>>>>> c3d90973e441c456871e2f7d3f1c9a04256cd60a
 var createEntry = function(date, text, mood) {
   var cardEl = $("<div>")
   .addClass("card mr-2 mb-2 w-50")
@@ -79,23 +65,11 @@ var createEntry = function(date, text, mood) {
   $(cardEl).append(cardBodyEl);
   $(cardBodyEl).append(cardTitleEl, cardTextEl, moodButtonEl);
   
-<<<<<<< HEAD
-=======
   
->>>>>>> c3d90973e441c456871e2f7d3f1c9a04256cd60a
 }
 // TODO: function that saves this record to local storage. place that within the createEntry function.
 
 
-<<<<<<< HEAD
-// TODO: function that loads the information from local storage and displays it on the page.
-
-//TODO: concept: load information from local storage. display the date property as a clickable link in sidebar. on click, display a modal that shows the record of the previous entry
-
-
-// call function on page load
-displayDate();
-=======
 
 // TODO: function that loads the information from local storage and displays it on the page.
 
@@ -379,4 +353,3 @@ $("#search-form").on("submit", formSubmitHandler);
 $("#search-form").on("submit", createSearchHistoryButton);
 
 $("#search-history").on("click", "button", buttonClickHandler);
->>>>>>> c3d90973e441c456871e2f7d3f1c9a04256cd60a
