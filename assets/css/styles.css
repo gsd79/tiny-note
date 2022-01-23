@@ -88,8 +88,7 @@ textarea:focus {
   
 }
 
-.button-happy, .button-sad, .button-angry, .button-content {
-  background-color: #8a307f;
+.mood-button {
   border-radius: 6px;
   border: 1px solid #b2b8ad;
   display: inline-block;
@@ -104,7 +103,7 @@ textarea:focus {
 }
 
 
-.button-happy:hover {
+/*.button-happy:hover {
   background: rgba(0, 255, 51, 0.6);
 }
 
@@ -116,7 +115,7 @@ textarea:focus {
 }
 .button-content:hover {
   background: rgba(58, 105, 202);
-}
+}*/
 
 .ql-toolbar.ql-snow {
   
