@@ -139,16 +139,16 @@ $("#entry-form").on("submit", function(event) {
 
   // grab date 
   var date = $(".todays-date").text();
-  console.log(date);
+ 
   // grab text entry
   var text = $("#editor").text();
-  console.log(text)
+ 
   // grab mood with if function
   var mood = $(".selected").text();
-  console.log(mood)
+ 
 
   var weather = $(".temperature").text();
-  console.log(weather)
+ 
   // temp obj
   var entry = {};
   //load date into object
@@ -193,9 +193,11 @@ var createEntry = function(date, text, mood, weather) {
 
 // load entries from local storage then display on page
 var loadEntries = function () {
-  entries = entries ? JSON.parse(localStorage.getItem("entries")) : [];
+  entries = JSON.parse(localStorage.getItem("entries"));
 
-  
+  if (!entries) {
+    entries =[];
+  }
   // loop over
   entries.forEach(function(entry) {
     createEntry(entry.date, entry.text, entry.mood, entry.weather)
