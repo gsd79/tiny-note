@@ -193,11 +193,9 @@ var createEntry = function(date, text, mood, weather) {
 
 // load entries from local storage then display on page
 var loadEntries = function () {
-  entries = JSON.parse(localStorage.getItem("entries"));
+  entries = entries ? JSON.parse(localStorage.getItem("entries")) : [];
 
-  if (!entries) {
-    entries =[];
-  }
+  
   // loop over
   entries.forEach(function(entry) {
     createEntry(entry.date, entry.text, entry.mood, entry.weather)
