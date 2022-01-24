@@ -1,5 +1,5 @@
 var mood;
-var entries = {};
+var entries = [];
 var apiKey = "de4084fe21aab085a9b43a06f4ecd035";
 var date = moment().format("dddd, MMMM Do");
 
@@ -150,15 +150,17 @@ $("#entry-form").on("submit", function(event) {
 
   var weather = $(".temperature").text();
   console.log(weather)
-  // save to local storage
-  var entry = [{
-    date: date,
-    text: text,
-    mood: mood,
-    weather: weather
-  }];
+  // temp obj
+  var entry = {};
+  //load date into object
+  entry.date = date;
+  entry.text = text;
+  entry.mood = mood;
+  entry.weather = weather;
+  // push into entries array
+  entries.push(entry);
 
-  localStorage.setItem(date, JSON.stringify(entry));
+  localStorage.setItem(date, JSON.stringify(entries));
   createEntry(date,text,mood,weather);
 })
 
@@ -191,7 +193,7 @@ var createEntry = function(date, text, mood, weather) {
 var loadEntries = function () {
   var prevEntry = JSON.parse(localStorage.getItem(date));
 
-
+  console.log(prevEntry)
 }
 
 
