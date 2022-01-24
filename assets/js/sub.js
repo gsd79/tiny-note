@@ -36,7 +36,7 @@ $("#entry-form").on("submit", function(event) {
   var mood = $(".selected").text();
   console.log(mood)
   // save to 
-  createEntry(date,text,mood);
+  // createEntry(date,text,mood);
 })
 
 //  function that creates a record for that day's entry

@@ -125,6 +125,34 @@ var displayTodaysForecast = function(forecast) {
   $(iconContainerEl).append(iconEl)
 }
 
+// add class that indicates which button has been selected
+$("#entry-form").on("click", ".mood-button", function() {
+
+  if ($(this).siblings("selected")) {
+    $(this).siblings().removeClass("selected");
+    $(this).addClass("selected")
+  }
+});
+
+// event handler that submits the form and saves to local storage
+$("#entry-form").on("submit", function(event) {
+  event.preventDefault();
+
+  // grab date 
+  var date = $(".header").children(".date-el").text();
+  console.log(date);
+  // grab text entry
+  var text = $(this).children("#editor").text();
+  console.log(text)
+  // grab mood with if function
+  var mood = $(".selected").text();
+  console.log(mood)
+  // save to 
+  // createEntry(date,text,mood);
+})
+
+
+
 
 
 // call function on page load
