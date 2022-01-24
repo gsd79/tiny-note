@@ -198,6 +198,8 @@ textarea:focus {
   word-spacing: 2px;
   color: #8a307f;
   font-weight: bold;
+ 
+
 }
 /*end of left-side bar buttons and main content container text*/
 
@@ -209,7 +211,7 @@ textarea:focus {
   
 }
 
-.button-happy, .button-sad, .button-angry, .button-content {
+.mood-button {
   background-color: #8a307f;
   border-radius: 6px;
   border: 1px solid #b2b8ad;
@@ -225,7 +227,11 @@ textarea:focus {
 }
 
 
+<<<<<<< HEAD
 .happy-button:hover {
+=======
+/*.button-happy:hover {
+>>>>>>> a093500efd65b691da234a66875d3b5dcbc4fc9f
   background: rgba(0, 255, 51, 0.6);
 }
 
@@ -237,8 +243,12 @@ textarea:focus {
 }
 .content-button:hover {
   background: rgba(58, 105, 202);
-}
+}*/
 
+
+
+
+<<<<<<< HEAD
 .ql-toolbar.ql-snow {
   
   box-sizing: border-box;
@@ -257,3 +267,5 @@ textarea:focus {
   margin:auto;
   border: 3px double  #79a7d3;
 }
+=======
+>>>>>>> a093500efd65b691da234a66875d3b5dcbc4fc9f
