@@ -10,7 +10,8 @@
     href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Righteous&family=Staatliches&display=swap"
     rel="stylesheet">
   <link href="https://cdn.quilljs.com/1.3.7/quill.snow.css" rel="stylesheet">
-  <script src="https://cdn.quilljs.com/1.3.7/quill.js"></script>
+
+  <link rel="stylesheet" href="./assets/css/styles.css">
   <script>
     tailwind.config = {
       theme: {
@@ -56,13 +57,13 @@
       <!--weather widget-->
       <div class="space-x-20 weather-container">
         <div id="weather-section" class="flex flex-column justify-content-center  mb-3">
-          <div class="search-wrapper border-bottom">
-            <h2>Search for a City:</h2>
+          <div class="search-wrapper border-bottom m-auto my-10">
+            <h2 class="m-auto">Search for a City:</h2>
             <!--search entry-->
             <form id="search-form" class="d-flex flex-column form-group">
               <input name="searchterm" id="searchterm" type="text" autofocus="true" placeholder="San Diego"
-                class="mb-3 search-keyword" />
-              <button id="submit-btn" type="submit" class="btn btn-primary gradient nice-border">Search</button>
+                class="capitalize border-double border-4 border-[#8a307f] p-3"/>
+              <button id="submit-btn" type="submit" class="btn-right">Search</button>
             </form>
           </div>
 
@@ -71,9 +72,9 @@
         <!--Journal entry -->
         <div class="journal-container">
           <div class="space-y-5 justify-center journal-entry ">
-            <label for="exampleFormControlTextarea1" class="form-label inline-block mb-2 share-thought-title">Share your
+            <label for="jounral-text-entry" class="form-label inline-block mb-2 share-thought-title">Share your
               thoughts</label>
-            <div class="editor-container border-double border-4 border-indigo-600  my-auto">
+            <div class="editor-container border-double border-4 border-[#79a7d3] ">
               <div id="editor" style=height:200px;width:800px;margin:auto;></div>
 
 
@@ -101,7 +102,7 @@
           </div>
 
           <div id="submission" class="form-group align-items-center">
-            <button id="submit-button" class="btn btn-primary submit-btn w-100" type="submit">Submit</button>
+            <button id="submit-button" class="btn-right" type="submit">Submit</button>
           </div>
         </div>
 
@@ -117,6 +118,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
   <!-- moment.js cdn-->
   <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+  <script src="https://cdn.quilljs.com/1.3.7/quill.js"></script>
   <script src="assets/js/quill_script.js"></script>
   <script src="/assets/js/main.js"></script>
 
