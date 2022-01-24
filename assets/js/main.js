@@ -21,7 +21,6 @@ var formSubmitHandler = function(event) {
   var city = $("#searchterm").val().trim();
 
   if (city) {
-    console.log(city)
     // reset display
     getCoordinates(city)
     $("#forecasts").text("");
@@ -160,8 +159,10 @@ $("#entry-form").on("submit", function(event) {
   // push into entries array
   entries.push(entry);
 
-  localStorage.setItem(date, JSON.stringify(entries));
+  localStorage.setItem("entries", JSON.stringify(entries));
   createEntry(date,text,mood,weather);
+
+  
 })
 
 //  function that creates a record for that day's entry
@@ -190,10 +191,18 @@ var createEntry = function(date, text, mood, weather) {
   $(".previous-date-container").append(entryDivEl)
 }
 
+// load entries from local storage then display on page
 var loadEntries = function () {
-  var prevEntry = JSON.parse(localStorage.getItem(date));
+  entries = JSON.parse(localStorage.getItem("entries"));
 
-  console.log(prevEntry)
+  if (!entries) {
+    entries =[];
+  }
+  // loop over
+  entries.forEach(function(entry) {
+    createEntry(entry.date, entry.text, entry.mood, entry.weather)
+  })
+
 }
 
 
