@@ -26,3 +26,4 @@ var quill = new Quill('#editor', {
 function logHtmlContent() {
     console.log(quill.root.innerHTML);
 }
+
