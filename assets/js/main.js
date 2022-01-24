@@ -1,10 +1,10 @@
 var mood;
 var entries = {};
 var apiKey = "de4084fe21aab085a9b43a06f4ecd035";
+var date = moment().format("dddd, MMMM Do");
 
 // function that displays date on page
 var displayDate = function() {
-  var date = moment().format("dddd, MMMM Do");
 
   var dateEl = $("<p>")
   .addClass("date-el font-weight-bold")
@@ -151,9 +151,14 @@ $("#entry-form").on("submit", function(event) {
   var weather = $(".temperature").text();
   console.log(weather)
   // save to local storage
-  var entry = [text,mood,weather];
-  entries.p
-  localStorage.setItem(date, entry);
+  var entry = [{
+    date: date,
+    text: text,
+    mood: mood,
+    weather: weather
+  }];
+
+  localStorage.setItem(date, JSON.stringify(entry));
   createEntry(date,text,mood,weather);
 })
 
@@ -183,11 +188,15 @@ var createEntry = function(date, text, mood, weather) {
   $(".previous-date-container").append(entryDivEl)
 }
 
-var displayPreviousEntry = function () {
+var loadEntries = function () {
+  var prevEntry = JSON.parse(localStorage.getItem(date))
   
+
+
 }
 
 
 // call function on page load
 displayDate();
 $("#search-form").on("submit", formSubmitHandler);
+loadEntries();
