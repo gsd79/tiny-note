@@ -134,22 +134,54 @@ $("#entry-form").on("click", ".mood-button", function() {
   }
 });
 
-// event handler that submits the form and saves to local storage
+// event handler that submits the form, captures the relevant data, and saves to local storage
 $("#entry-form").on("submit", function(event) {
   event.preventDefault();
 
   // grab date 
-  var date = $(".header").children(".date-el").text();
+  var date = $(".todays-date").text();
   console.log(date);
   // grab text entry
-  var text = $(this).children("#editor").text();
+  var text = $("#editor").text();
   console.log(text)
   // grab mood with if function
   var mood = $(".selected").text();
   console.log(mood)
+
+  var weather = $(".temperature").text();
+  console.log(weather)
   // save to 
-  // createEntry(date,text,mood);
+  // createEntry(date,text,mood,weather);
 })
+
+//  function that creates a record for that day's entry
+var createEntry = function(date, text, mood, weather) {
+  var cardEl = $("<div>")
+  .addClass("card mr-2 mb-2 w-50")
+
+  var cardBodyEl = $("<div>")
+  .addClass("card-body")
+
+  var cardTitleEl = $("<p>")
+  .addClass("card-title font-weight-bold")
+  .text(date)
+
+  var cardTextEl = $("<p>")
+  .addClass("card-text")
+  .text(text)
+
+  var moodButtonEl = $("<button>")
+  .addClass(`${mood} mood-button btn btn-light border`)
+  .attr("type", "button")
+  .text(mood);
+
+  // append elements
+  $("#load-area").append(cardEl);
+  $(cardEl).append(cardBodyEl);
+  $(cardBodyEl).append(cardTitleEl, cardTextEl, moodButtonEl);
+  
+  
+}
 
 
 

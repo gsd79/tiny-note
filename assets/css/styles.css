@@ -105,11 +105,14 @@ body {
   text-align:center;
   margin-right: 40px;
 }
+.weather-results {
+  width: 40%;
+}
 .container-border {
   border: 1px solid grey;
-  margin-left: 20px;
-  margin-top: 10px;
+  margin: 20px;
   background-color: lightblue;
+  padding: 50px;
 }
 .icon-container {
   margin: 0 auto;
