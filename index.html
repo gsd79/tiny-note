@@ -60,13 +60,18 @@
           <div class="search-wrapper border-bottom m-auto my-10">
             <h2 class="text-center text-[#8a3080] mb-4 text-lg">Search for a City:</h2>
             <!--search entry-->
-            <form id="search-form" class="d-flex flex-column form-group">
+            <form id="search-form">
               <input name="searchterm" id="searchterm" type="text" autofocus="true" placeholder="San Diego"
                 class="capitalize border-double border-4 border-[#8a307f] p-3"/>
               <button id="submit-button" class="btn-right" type="submit" >Search</button>
              
             </form>
           </div>
+          <!--search results; dynamically generated results will go here-->
+          <div id="weather-results">
+            
+          </div>
+          
 
         </div>
 
@@ -79,6 +84,7 @@
               <div id="editor" style=height:200px;width:900px;margin:auto;></div>
 
 
+              </div>
             </div>
           </div>
         <div id="mood-submit-bar" class="mood-submit">
