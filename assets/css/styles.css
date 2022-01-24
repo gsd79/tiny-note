@@ -132,13 +132,6 @@ body {
   overflow-wrap: break-word;
 }
 
-/*.button-happy:hover {
-  background: rgba(0, 255, 51, 0.6);
-}
-
-.ql-editor {
-  width: 800px;
-}
 
 
 .ql-toolbar.ql-snow {
@@ -163,3 +156,12 @@ body {
   display: flex;
   justify-content: flex-end;
 }
+
+#searchterm[type="text"]:focus {
+  
+  outline : none;
+ }
+
+ .previous-date-container:focus {
+   outline:none;
+ }
