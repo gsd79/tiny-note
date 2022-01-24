@@ -189,8 +189,7 @@ var createEntry = function(date, text, mood, weather) {
 }
 
 var loadEntries = function () {
-  var prevEntry = JSON.parse(localStorage.getItem(date))
-  
+  var prevEntry = JSON.parse(localStorage.getItem(date));
 
 
 }
