@@ -4,10 +4,10 @@ var apiKey = "de4084fe21aab085a9b43a06f4ecd035";
 
 // function that displays date on page
 var displayDate = function() {
-  var date = moment().format("dddd, MMMM Do YYYY");
+  var date = moment().format("dddd, MMMM Do YYYY, h:mm a");
 
   var dateEl = $("<p>")
-  .addClass("date-el")
+  .addClass("date-el font-weight-bold")
   .text(date);
 
   $(".todays-date").append(dateEl)
