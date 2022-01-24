@@ -3,26 +3,34 @@ body {
   border-radius: 5px;
   font-family: 'Righteous', cursive;
 }
+.selected {
+  border: 5px solid pink;
+}
 
 /*buttons for left-side bar*/
 .btn {
-  background: #8a3080;
-  background-image: -webkit-linear-gradient(top, #79a7d3, #79a7d3);
-  background-image: -moz-linear-gradient(top, #79a7d3, #79a7d3);
-  background-image: -ms-linear-gradient(top, #79a7d3, #79a7d3);
-  background-image: -o-linear-gradient(top, #79a7d3, #79a7d3);
-  background-image: linear-gradient(bottom, #79a7d3, #79a7d3);
+  background: #79a7d3;
   -webkit-border-radius: 28;
   -moz-border-radius: 28;
   border-radius: 28px 0px 0px 28px;
-  font-family: Arial;
   color: #8a3080;
   font-size: 20px;
   padding: 10px 20px 10px 20px;
   text-decoration: none;
   margin-left: 10px;
 }
-
+/*buttons for right panel*/
+.btn-right {
+  background: #79a7d3;
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  color: #8a3080;
+  font-size: 20px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  margin-left: 10px;
+}
 /*header text styling and background color*/
 .app-name {
   font-size: 87px;
@@ -33,16 +41,6 @@ body {
   -33px -18px 0px rgba(64,95,207,0);
 }
 
-/*textarea shadowing box*/
-textarea {
-  appearance: none;
-  background: none;
-  -webkit-box-shadow: 5px 5px 15px 5px #000000;
-  box-shadow: 5px 5px 15px 5px #000000;
-}
-textarea:focus {
-  outline: none;
-}
 .right-container {
   flex: 0 0 70%;
   border-radius: 70 70px 0 0;
@@ -77,6 +75,8 @@ textarea:focus {
   word-spacing: 2px;
   color: #8a307f;
   font-weight: bold;
+ 
+
 }
 /*end of left-side bar buttons and main content container text*/
 
@@ -88,7 +88,7 @@ textarea:focus {
   
 }
 
-.button-happy, .button-sad, .button-angry, .button-content {
+.mood-button {
   background-color: #8a307f;
   border-radius: 6px;
   border: 1px solid #b2b8ad;
@@ -104,7 +104,7 @@ textarea:focus {
 }
 
 
-.button-happy:hover {
+/*.button-happy:hover {
   background: rgba(0, 255, 51, 0.6);
 }
 
@@ -116,22 +116,10 @@ textarea:focus {
 }
 .button-content:hover {
   background: rgba(58, 105, 202);
-}
+}*/
 
-.ql-toolbar.ql-snow {
-  
-  box-sizing: border-box;
-  font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
-  padding: 8px;
-  text-align: center;
-  width: 800px;
-  margin:auto;
-  display:flex; 
-  justify-content: space-evenly; 
-  }
 
-.editor-container{
-  width:808px;
-  margin:auto;
-  border: 3px double  #79a7d3;
-}
+
+
+
+
