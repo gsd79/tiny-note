@@ -178,14 +178,21 @@ var createEntry = function(date, text, mood, weather) {
   .addClass("previous-temp")
   .text(weather);
   // append elements
-  $(buttonEl).append(anchorEl);
-  $(entryDivEl).append(buttonEl, textEl, moodEl, tempEl);
-  $(".previous-date-container").append(entryDivEl)
+  $("#load-area").append(cardEl);
+  $(cardEl).append(cardBodyEl);
+  $(cardBodyEl).append(cardTitleEl, cardTextEl, moodButtonEl);
+  
+  saveRecord();
 }
 
 var displayPreviousEntry = function () {
   
 }
+};
+
+// TODO: function that loads the information from local storage and displays it on the page.
+
+//TODO: concept: load information from local storage. display the date propeerty as a clickable link in sidebar. on click, display a modal that shows the record of the previous entry
 
 
 // call function on page load
