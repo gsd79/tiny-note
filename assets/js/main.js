@@ -152,6 +152,7 @@ $("#entry-form").on("submit", function(event) {
   console.log(weather)
   // save to local storage
   var entry = [text,mood,weather];
+  entries.p
   localStorage.setItem(date, entry);
   createEntry(date,text,mood,weather);
 })
@@ -176,9 +177,6 @@ var createEntry = function(date, text, mood, weather) {
   var tempEl = $("<p>")
   .addClass("previous-temp")
   .text(weather);
-
-
-
   // append elements
   $(buttonEl).append(anchorEl);
   $(entryDivEl).append(buttonEl, textEl, moodEl, tempEl);

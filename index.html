@@ -10,7 +10,8 @@
     href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Righteous&family=Staatliches&display=swap"
     rel="stylesheet">
   <link href="https://cdn.quilljs.com/1.3.7/quill.snow.css" rel="stylesheet">
-  <script src="https://cdn.quilljs.com/1.3.7/quill.js"></script>
+
+  <link rel="stylesheet" href="./assets/css/styles.css">
   <script>
     tailwind.config = {
       theme: {
@@ -57,12 +58,13 @@
         <div id="weather-section" class="flex flex-column justify-content-center mb-3">
 
           <div class="search-wrapper border-bottom m-auto my-10">
-            <h2>Search for a City:</h2>
+            <h2 class="text-center text-[#8a3080] mb-4 text-lg">Search for a City:</h2>
             <!--search entry-->
             <form id="search-form">
               <input name="searchterm" id="searchterm" type="text" autofocus="true" placeholder="San Diego"
-                class="capitalize border-double border-4 border-[#8a307f] p-3" />
-              <button id="submit-btn" type="submit" class="btn-right">Search</button>
+                class="capitalize border-double border-4 border-[#8a307f] p-3"/>
+              <button id="submit-button" class="btn-right" type="submit" >Search</button>
+             
             </form>
           </div>
           <!--search results; dynamically generated results will go here-->
@@ -77,7 +79,7 @@
         <div class="journal-container">
           <form id="entry-form">
             <div class="space-y-5 justify-center journal-entry ">
-              <label for="jounral-text-entry" class="form-label inline-block mb-2 share-thought-title">Share your
+              <label for="journal-text-entry" class="text-[#8a307f] text-[25px] inline-block mb-2 share-thought-title">Share your
                 thoughts</label>
               <div class="editor-container border-double border-4 border-[#79a7d3]">
                 <div id="editor" style=height:200px;width:800px;margin:auto;></div>
