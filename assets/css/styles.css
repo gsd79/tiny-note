@@ -107,7 +107,17 @@ textarea:focus {
   text-align:center;
   margin-right: 40px;
 }
-
+.container-border {
+  border: 1px solid grey;
+  margin-left: 20px;
+  margin-top: 10px;
+  background-color: lightblue;
+}
+.icon-container {
+  margin: 0 auto;
+  width: 50px;
+  height: 50px;
+}
 
 /*.button-happy:hover {
   background: rgba(0, 255, 51, 0.6);
