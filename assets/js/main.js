@@ -4,7 +4,7 @@ var apiKey = "de4084fe21aab085a9b43a06f4ecd035";
 
 // function that displays date on page
 var displayDate = function() {
-  var date = moment().format("dddd, MMMM Do YYYY, h:mm a");
+  var date = moment().format("dddd, MMMM Do");
 
   var dateEl = $("<p>")
   .addClass("date-el font-weight-bold")
@@ -35,8 +35,8 @@ var errorMessage = function() {
   var alertText = "City not found."
 
   var alertEl = $("<p>")
-  addClass("alert-text")
-  text(alertText)
+  .addClass("alert-text")
+  .text(alertText)
 
   $("#search-form").append(alertEl);
 }
@@ -150,41 +150,42 @@ $("#entry-form").on("submit", function(event) {
 
   var weather = $(".temperature").text();
   console.log(weather)
-  // save to 
-  // createEntry(date,text,mood,weather);
+  // save to local storage
+  var entry = [text,mood,weather];
+  entries.p
+  localStorage.setItem(date, entry);
+  createEntry(date,text,mood,weather);
 })
 
 //  function that creates a record for that day's entry
 var createEntry = function(date, text, mood, weather) {
-  var cardEl = $("<div>")
-  .addClass("card mr-2 mb-2 w-50")
+  var entryDivEl = $("<div>")
+  .addClass("entry-card")
+  var buttonEl = $("<button>")
+  .addClass("btn previous-entry hover:skew-y-6")
+  .attr("type", "button");
 
-  var cardBodyEl = $("<div>")
-  .addClass("card-body")
-
-  var cardTitleEl = $("<p>")
-  .addClass("card-title font-weight-bold")
-  .text(date)
-
-  var cardTextEl = $("<p>")
-  .addClass("card-text")
-  .text(text)
-
-  var moodButtonEl = $("<button>")
-  .addClass(`${mood} mood-button btn btn-light border`)
-  .attr("type", "button")
+  var anchorEl = $("<a>")
+  .addClass("previous-link")
+  .text(date);
+  var textEl = $("<p>")
+  .addClass("previous-date")
+  .text(text);
+  var moodEl = $("<p>")
+  .addClass("previous-mood")
   .text(mood);
-
+  var tempEl = $("<p>")
+  .addClass("previous-temp")
+  .text(weather);
   // append elements
-  $("#load-area").append(cardEl);
-  $(cardEl).append(cardBodyEl);
-  $(cardBodyEl).append(cardTitleEl, cardTextEl, moodButtonEl);
-  
-  
+  $(buttonEl).append(anchorEl);
+  $(entryDivEl).append(buttonEl, textEl, moodEl, tempEl);
+  $(".previous-date-container").append(entryDivEl)
 }
 
-
-
+var displayPreviousEntry = function () {
+  
+}
 
 
 // call function on page load

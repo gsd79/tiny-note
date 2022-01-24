@@ -23,6 +23,7 @@
       }
     }
   </script>
+  <link rel="stylesheet" href="./assets/css/styles.css">
   <title>tinyNote</title>
 </head>
 
@@ -34,7 +35,7 @@
   <!--side bar showing todays date and previous 3 dates, consider 6 and responsive down based on screen size-->
 
   <div class="flex content-center min-h-screen main-container">
-    <div class="w-64 text-right left-container">
+    <div class="w-68 text-right left-container">
       <h3 class="text-center pt-6 today-title">Today</h3>
       <div class="grid grid-rows-1 today-date-container">
         <button class="btn hover:skew-y-6 todays-date"></button>
@@ -43,9 +44,7 @@
       <!--Buttons will recall from local storage to the corresponding date-->
       <h3 class="text-center pt-9 previous-title">Previous Entries</h3>
       <div class="grid grid-rows-3 gap-2 previous-date-container">
-        <button class="btn hover:skew-y-6">Date 1</button>
-        <button class="btn hover:skew-y-6">Date 2</button>
-        <button class="btn hover:skew-y-6">Date 3</button>
+        <!--dynamically generated entries will go here-->
       </div>
     </div>
 
@@ -56,7 +55,8 @@
     <div class="flex flex-col content-center right-container">
       <!--weather widget-->
       <div class="space-x-20 weather-container">
-        <div id="weather-section" class="flex flex-column justify-content-center  mb-3">
+        <div id="weather-section" class="flex flex-column justify-content-center mb-3">
+
           <div class="search-wrapper border-bottom m-auto my-10">
             <h2 class="text-center text-[#8a3080] mb-4 text-lg">Search for a City:</h2>
             <!--search entry-->
@@ -122,12 +122,17 @@
     </div>
   </div>
   </div>
+
+  
   <!--jquery cdn-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
   <!-- moment.js cdn-->
   <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+<<<<<<< HEAD
   <script src="https://cdn.quilljs.com/1.3.7/quill.js"></script>
+=======
+>>>>>>> 58d7dd26825ea5ba012e2b9711836850a471cbbd
   <script src="assets/js/quill.js"></script>
   <script src="/assets/js/main.js"></script>
 
