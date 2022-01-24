@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="./assets/css/styles.css">
+  
   <link
     href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Righteous&family=Staatliches&display=swap"
     rel="stylesheet">
@@ -22,6 +22,7 @@
       }
     }
   </script>
+  <link rel="stylesheet" href="./assets/css/styles.css">
   <title>tinyNote</title>
 </head>
 
@@ -33,7 +34,7 @@
   <!--side bar showing todays date and previous 3 dates, consider 6 and responsive down based on screen size-->
 
   <div class="flex content-center min-h-screen main-container">
-    <div class="w-64 text-right left-container">
+    <div class="w-68 text-right left-container">
       <h3 class="text-center pt-6 today-title">Today</h3>
       <div class="grid grid-rows-1 today-date-container">
         <button class="btn hover:skew-y-6 todays-date"></button>
@@ -42,9 +43,7 @@
       <!--Buttons will recall from local storage to the corresponding date-->
       <h3 class="text-center pt-9 previous-title">Previous Entries</h3>
       <div class="grid grid-rows-3 gap-2 previous-date-container">
-        <button class="btn hover:skew-y-6">Date 1</button>
-        <button class="btn hover:skew-y-6">Date 2</button>
-        <button class="btn hover:skew-y-6">Date 3</button>
+        <!--dynamically generated entries will go here-->
       </div>
     </div>
 
@@ -120,6 +119,8 @@
     </div>
   </div>
   </div>
+
+  
   <!--jquery cdn-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
