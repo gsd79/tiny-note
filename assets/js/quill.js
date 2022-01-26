@@ -2,7 +2,8 @@ var toolbarOptions = [
     ['bold', 'italic', 'underline', 'strike'],        // toggled buttons
     ['blockquote', 'code-block'],
 
-    [{ 'header': 1 }, { 'header': 2 }],               // custom button values
+    [{ 'header': 1 }, { 'header': 2 }],     
+    [{ 'size': ['small', false, 'large', 'huge'] }] ,// custom dropdown          // custom button values
     [{ 'list': 'ordered' }, { 'list': 'bullet' }],
 
 
@@ -25,3 +26,4 @@ var quill = new Quill('#editor', {
 function logHtmlContent() {
     console.log(quill.root.innerHTML);
 }
+
