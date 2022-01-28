@@ -1,6 +1,6 @@
 var mood;
 var entries = [];
-var apiKey = "de4084fe21aab085a9b43a06f4ecd035";
+var apiKey = "532d89f45510452a4507813757019a73";
 var date = moment().format("dddd, MMMM Do");
 
 // function that displays date on page
