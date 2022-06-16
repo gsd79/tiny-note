@@ -77,38 +77,42 @@
 
         <!--Journal entry -->
         <div class="journal-container">
-          <div class="space-y-5 justify-center journal-entry ">
-            <label for="jounral-text-entry" class="text-[#8a307f] text-[25px] inline-block mb-2 share-thought-title">Share your
-              thoughts</label>
-            <div class="editor-container border-double border-4 border-[#79a7d3] ">
-              <div id="editor" style=height:200px;width:900px;margin:auto;></div>
+          <form id="entry-form">
+            <div class="space-y-5 justify-center journal-entry ">
+              <label for="journal-text-entry" class="text-[#8a307f] text-[25px] inline-block mb-2 share-thought-title">Share your
+                thoughts</label>
+              <div class="editor-container border-double border-4 border-[#79a7d3]">
+                <div id="editor" style=height:200px;width:900px;margin:auto;></div>
 
 
               </div>
             </div>
-          </div>
-        <div id="mood-submit-bar" class="mood-submit">
-          <div id="mood-selector" class="form-group mt-4 flex justify-center mb-10">
-            <h2 class="mood-header d-inline mr-5 text-[#8a307f] text-[25px]">Mood: </h2>
-            <span class="button-wrapper inline ">
-              <button id="happy-button"
-                class="mood-button bg-main mr-3 btn btn-light border hover:bg-green-400 hover:skew-y-6"
-                type="button">Happy 😁</button>
-              <button id="sad-button"
-                class="mood-button bg-main mr-3 btn btn-light border hover:bg-purple-400 hover:skew-y-6"
-                type="button">Sad
-                😞</button>
-              <button id="angry-button"
-                class="mood-button bg-main mr-3 btn btn-light border hover:bg-red-400 hover:skew-y-6"
-                type="button">Angry
-                😡</button>
-              <button id="content-button"
-                class="mood-button bg-main mr-3 btn btn-light border hover:bg-sky-900 hover:skew-y-6"
-                type="button">Content 🙂</button>
-            </span>
-            <div id="submission" class="form-group ml-38">
-              <button id="txt-submit-button" class="btn-right-two" type="submit">Submit</button>
+
+            <div id="mood-submit-bar" class="mood-submit">
+              <div id="mood-selector" class="form-group mt-4 flex justify-center mb-10">
+                <h2 class="mood-header d-inline mr-5 text-[#8a307f] text-[25px]">Mood: </h2>
+                <span class="button-wrapper inline ">
+                  <button id="happy-button"
+                    class="mood-button bg-main mr-3 btn btn-light border hover:bg-green-400 hover:skew-y-6"
+                    type="button">Happy 😁</button>
+                  <button id="sad-button"
+                    class="mood-button bg-main mr-3 btn btn-light border hover:bg-purple-400 hover:skew-y-6"
+                    type="button">Sad
+                    😞</button>
+                  <button id="angry-button"
+                    class="mood-button bg-main mr-3 btn btn-light border hover:bg-red-400 hover:skew-y-6"
+                    type="button">Angry
+                    😡</button>
+                  <button id="content-button"
+                    class="mood-button bg-main mr-3 btn btn-light border hover:bg-sky-900 hover:skew-y-6"
+                    type="button">Content 🙂</button>
+                </span>
+                <div id="submission" class="form-group ml-38">
+                  <button id="txt-submit-button" class="btn-right-two" type="submit">Submit</button>
+                </div>
+              </div>
             </div>
+        
           </div>
         </div>
 
@@ -123,15 +127,13 @@
   </div>
   </div>
 
-  
-  <!--jquery cdn-->
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-  <!-- moment.js cdn-->
+
   <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
-  <script src="https://cdn.quilljs.com/1.3.7/quill.js"></script>
-  <script src="assets/js/quill.js"></script>
-  <script src="/assets/js/main.js"></script>
+  <script src="./assets/js/quill.js"></script>
+  <script src="./assets/js/main.js"></script>
 
 </body>
 

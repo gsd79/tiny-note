@@ -1,7 +1,7 @@
 # Tiny Note
 This is a application built using OneWeather and QuillJS Apis as well as Tailwind css framework. You can check out the live link here: https://gsd79.github.io/tiny-note/
 
-![webpage screenshot](https://i.postimg.cc/7HF0bQJw/tiny-Note-Google-Chrome-23-Jan-22-10-36-29-PM.png) 
+![webpage screenshot](https://i.postimg.cc/6tS9VcX1/tiny-Note-Google-Chrome-24-Jan-22-12-35-26-PM.png) 
 
 
 ## Features

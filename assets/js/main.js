@@ -1,10 +1,10 @@
 var mood;
-var entries = {};
-var apiKey = "de4084fe21aab085a9b43a06f4ecd035";
+var entries = [];
+var apiKey = "532d89f45510452a4507813757019a73";
+var date = moment().format("dddd, MMMM Do");
 
 // function that displays date on page
 var displayDate = function() {
-  var date = moment().format("dddd, MMMM Do");
 
   var dateEl = $("<p>")
   .addClass("date-el font-weight-bold")
@@ -21,7 +21,6 @@ var formSubmitHandler = function(event) {
   var city = $("#searchterm").val().trim();
 
   if (city) {
-    console.log(city)
     // reset display
     getCoordinates(city)
     $("#forecasts").text("");
@@ -140,53 +139,72 @@ $("#entry-form").on("submit", function(event) {
 
   // grab date 
   var date = $(".todays-date").text();
-  console.log(date);
+ 
   // grab text entry
   var text = $("#editor").text();
-  console.log(text)
+ 
   // grab mood with if function
   var mood = $(".selected").text();
-  console.log(mood)
+ 
 
   var weather = $(".temperature").text();
-  console.log(weather)
-  // save to local storage
-  var entry = [text,mood,weather];
-  entries.p
-  localStorage.setItem(date, entry);
+ 
+  // temp obj
+  var entry = {};
+  //load date into object
+  entry.date = date;
+  entry.text = text;
+  entry.mood = mood;
+  entry.weather = weather;
+  // push into entries array
+  entries.push(entry);
+
+  localStorage.setItem("entries", JSON.stringify(entries));
   createEntry(date,text,mood,weather);
+
+  
 })
 
 //  function that creates a record for that day's entry
 var createEntry = function(date, text, mood, weather) {
-  var entryDivEl = $("<div>")
-  .addClass("entry-card")
-  var buttonEl = $("<button>")
-  .addClass("btn previous-entry hover:skew-y-6")
-  .attr("type", "button");
+  if (date || text || mood || weather) {
+    var entryDivEl = $("<div>")
+    .addClass("entry-card")
+    var buttonEl = $("<button>")
+    .addClass("btn previous-entry hover:skew-y-6")
+    .attr("type", "button");
 
-  var anchorEl = $("<a>")
-  .addClass("previous-link")
-  .text(date);
-  var textEl = $("<p>")
-  .addClass("previous-date")
-  .text(text);
-  var moodEl = $("<p>")
-  .addClass("previous-mood")
-  .text(mood);
-  var tempEl = $("<p>")
-  .addClass("previous-temp")
-  .text(weather);
-  // append elements
-  $("#load-area").append(cardEl);
-  $(cardEl).append(cardBodyEl);
-  $(cardBodyEl).append(cardTitleEl, cardTextEl, moodButtonEl);
-  
-  saveRecord();
+    var anchorEl = $("<a>")
+    .addClass("previous-link")
+    .text(date);
+    var textEl = $("<p>")
+    .addClass("previous-date")
+    .text(text);
+    var moodEl = $("<p>")
+    .addClass("previous-mood")
+    .text(mood);
+    var tempEl = $("<p>")
+    .addClass("previous-temp")
+    .text(weather);
+    // append elements
+    $(buttonEl).append(anchorEl);
+    $(entryDivEl).append(buttonEl, textEl, moodEl, tempEl);
+    $(".previous-date-container").append(entryDivEl)
+  }
 }
 
-var displayPreviousEntry = function () {
-  
+// load entries from local storage then display on page
+var loadEntries = function () {
+  entries = JSON.parse(localStorage.getItem("entries"));
+
+  if (!entries) {
+    entries =[];
+  }
+  // loop over
+  entries.forEach(function(entry) {
+    createEntry(entry.date, entry.text, entry.mood, entry.weather)
+  })
+
 }
 };
 
@@ -198,3 +216,4 @@ var displayPreviousEntry = function () {
 // call function on page load
 displayDate();
 $("#search-form").on("submit", formSubmitHandler);
+loadEntries();
