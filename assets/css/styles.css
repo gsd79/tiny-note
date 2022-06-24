@@ -165,3 +165,13 @@ body {
  .previous-date-container:focus {
    outline:none;
  }
+
+ form#entry-form>div:nth-child(1)>div {
+   margin: initial;
+   margin: auto auto auto -49px;
+ }
+
+ div#mood-submit-bar {
+   margin: initial;
+   margin: 0 auto 0 -110px;
+ }
